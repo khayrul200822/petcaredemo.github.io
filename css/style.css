@@ -837,6 +837,9 @@
      width: 575px;
      height: 575px;
      background: transparent;
+     display: flex;
+     align-items: center;
+     justify-content: center;
  }
 
  .newsletter_popup .newsletter_container .newsletter_close {
@@ -1086,6 +1089,10 @@ section#service_offer {
  }
 
  @media only screen and (max-width: 668px) {
+    .newsletter_popup .newsletter_container .newsletter_wrapper{
+        width: calc(100vw - 50px);
+        border-radius: 20px;
+    }
      form.search_items {
          width: 100%;
          max-width: unset;
