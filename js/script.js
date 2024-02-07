@@ -12,11 +12,9 @@ newsletter_poup_close.addEventListener("click", () => {
 //for select item
 const select_option = document.querySelectorAll(".category_option ul li")
 const select_field = document.querySelector(".category_field .field_title");
-console.log(select_field)
 select_option.forEach(option => {
   option.addEventListener("click", () => {
     select_field.textContent = option.textContent;
-    console.log(option.textContent)
   })
   
 })
