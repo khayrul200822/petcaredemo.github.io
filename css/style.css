@@ -1089,6 +1089,9 @@ section#service_offer {
  }
 
  @media only screen and (max-width: 668px) {
+    .newsletter_wrapper .newsletter_content .social_link{
+        display: grid !important;
+    }
     .newsletter_popup .newsletter_container .newsletter_wrapper{
         width: calc(100vw - 50px);
         border-radius: 20px;
