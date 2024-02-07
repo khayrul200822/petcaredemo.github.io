@@ -16,11 +16,52 @@
 </head>
 
 <body>
-    <!--side cart-->
 
+
+
+    <!--small device menu-->
+    <div class="offcanvas offcanvas-start side_menu_item" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <div class="logo">
+                <h2>El<span>mart</span></h2>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                class="fa-solid fa-x"></i></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="accordion" class="accordion-container">
+                <a href="index.html" class="accordion-title menu_item">Home</a>
+                <div class="accordion-content">
+                    <a href="index.html">Home page 1</a>
+                    <a href="#">Home page 2</a>
+                    <a href="#">Home page 3</a>
+                </div>
+                <a href="#" class="menu_item">Menu</a>
+                <a href="#" class="accordion-title menu_item">Reservation</a>
+                <div class="accordion-content">
+                    <a href="#">Reservation 1</a>
+                    <a href="#">Reservation 2</a>
+                </div>
+                <a href="#" class="accordion-title menu_item">Recipe</a>
+                <div class="accordion-content">
+                    <a href="#">Deshi Foods</a>
+                    <a href="#">Indian Foods</a>
+                    <a href="#">Russian Foods</a>
+                    <a href="#">Italian Foods</a>
+                    <a href="#">Spicy Foods</a>
+                    <a href="#">Thi Foods</a>
+                </div>
+                <a href="#" class="menu_item">Blog</a>
+                <a href="shop.html" class="menu_item">Shop</a>
+                <a href="#" class="menu_item">Contact</a>
+            </div>
+        </div>
+    </div>
+    <!--side cart-->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header side_cart_header">
-            <h5 class="offcanvas-title" id="offcanvasRightLabel"> <i class="fa-solid fa-bag-shopping me-2 "></i>My Cart</h5>
+            <h5 class="offcanvas-title" id="offcanvasRightLabel"> <i class="fa-solid fa-bag-shopping me-2 "></i>My Cart
+            </h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
                     class="fa-solid fa-x"></i></button>
         </div>
@@ -141,11 +182,15 @@
         <div class="main_header">
             <div class="container-fluid container-xl">
                 <div class="main_header_wrapper d-flex align-items-center justify-content-between">
+                    <div class="menu_icon">
+                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+        aria-controls="offcanvasExample"><i class="fa-solid fa-bars"></i></button>
+                    </div>
                     <div class="logo">
                         <h2>El<span>mart</span></h2>
                     </div>
                     <div class="header_search">
-                        <form class="d-flex align-items-center">
+                        <form class="search_items  align-items-center">
                             <div class="category">
                                 <div class="category_field">All Category <span><i
                                             class="fa-solid fa-chevron-down"></i></span></div>
@@ -191,6 +236,26 @@
                                     <li class="list-unstyled"><a href="#">Small Pet</a></li>
                                 </ul>
                             </div>
+
+                        </div>
+                        <div class="search_bar">
+                            <form class="search_items align-items-center">
+                                <div class="category">
+                                    <div class="category_field">All Category <span><i
+                                                class="fa-solid fa-chevron-down"></i></span></div>
+                                    <div class="category_option">
+                                        <ul class="mb-0 ps-0">
+                                            <li class="list-unstyled c_single_option">Pet Food -01</li>
+                                            <li class="list-unstyled c_single_option">Pet Food -02</li>
+                                            <li class="list-unstyled c_single_option">Pet Food -03</li>
+                                            <li class="list-unstyled c_single_option">Pet Food -04</li>
+                                            <li class="list-unstyled c_single_option">Pet Food -05</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <input type="search" name="product_search" placeholder="Search Your Product" required>
+                                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
                         </div>
                         <div class="main_menu_container">
                             <ul class="ps-0 mb-0 d-flex align-items-center">
