@@ -9,6 +9,18 @@ newsletter_poup_close.addEventListener("click", () => {
   newsletter_popup.style.transform = "scale(0)";
 })
 
+//for select item
+const select_option = document.querySelectorAll(".category_option ul li")
+const select_field = document.querySelector(".category_field .field_title");
+console.log(select_field)
+select_option.forEach(option => {
+  option.addEventListener("click", () => {
+    select_field.textContent = option.textContent;
+    console.log(option.textContent)
+  })
+  
+})
+
 
 //add to cart count
 const increase_button = document.querySelectorAll(".increase");
