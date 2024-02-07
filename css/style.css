@@ -388,7 +388,7 @@
      font-size: 14px;
      font-weight: 500;
      border-radius: 5px;
-     background: var(--color-three);
+     background: #ededed;
      position: relative;
      border: none;
      display: flex;
@@ -897,7 +897,9 @@
      position: relative;
      height: 40px;
  }
-
+ .newsletter_wrapper .newsletter_content form.newsletter_form .newsletter_input input::placeholder{
+    color: var(--color-one);
+ }
  .newsletter_wrapper .newsletter_content form.newsletter_form .newsletter_input input {
      width: 100%;
      height: 100%;
@@ -908,6 +910,7 @@
      border: none;
      border-bottom: 2px solid #777;
      transition: .6s;
+     color: var(--color-one);
  }
 
  .newsletter_wrapper .newsletter_content form.newsletter_form .newsletter_input>span {
@@ -923,14 +926,39 @@
 
  .newsletter_wrapper .newsletter_content form.newsletter_form>button {
      outline: none;
-     border: 1px solid transparent;
-     padding: 10px 25px;
+     border: none;
      border-radius: 50px;
      background: var(--color-two);
      color: var(--color-three);
      font-size: 15px;
      margin-top: 20px;
+     position: relative;
+     overflow: hidden;
+     width: 130px;
+     height: 39px;
  }
+ .newsletter_content form.newsletter_form>button::before {
+    content: " ";
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: var(--color-one);
+    transform-origin: bottom left;
+    transform: scale(0);
+    transition: .6s;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.newsletter_content form.newsletter_form>button span {
+    position: relative;
+    z-index: 1
+}
+.newsletter_content form.newsletter_form>button:hover::before {
+    transform: scale(1);
+    transform-origin: top right;
+    transition: .6s;
+}
 
  .newsletter_wrapper .newsletter_content .social_link a {
      width: 35px;
@@ -941,6 +969,8 @@
      background: var(--color-two);
      color: var(--color-three);
      font-size: 15px;
+     transition: .6s;
+     transform: scale(1);
  }
 
  .newsletter_popup .newsletter_container .newsletter_wrapper .n_popup_img::after {
@@ -998,7 +1028,11 @@ section#service_offer {
     color: var(--color-four);
     font-weight: 500;
 }
-
+.newsletter_wrapper .newsletter_content .social_link a:hover {
+    transform: scale(.9);
+    transition: .6s;
+    background: var(--color-one);
+}
 
 
 
