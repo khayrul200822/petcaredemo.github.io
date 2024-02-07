@@ -1,3 +1,15 @@
+// newsletter popup
+const newsletter_poup_close = document.querySelector(".newsletter_close");
+const newsletter_popup = document.querySelector(".newsletter_popup")
+
+setTimeout(() => {
+  newsletter_popup.style.transform= "scale(1)";
+   },5000)
+newsletter_poup_close.addEventListener("click", () => {
+  newsletter_popup.style.transform= "scale(0)";
+})
+
+
 //add to cart count
 const increase_button = document.querySelectorAll(".increase");
 const decrease_button = document.querySelectorAll(".decrease");
