@@ -1,16 +1,19 @@
+//add to cart count
+const increase_button = document.querySelectorAll(".increase");
+const decrease_button = document.querySelectorAll(".decrease");
+const cart_value_input = document.querySelectorAll(".cart_value");
 
-
-
-// const hover_area1 = document.querySelector(".option-menu");
-// const hover_btn1 = document.querySelector(".language")
-// const hover_btn2 = document.querySelector(".currency")
-
-// const hover_handling = (hover_btn, hover_area) => {
-//     hover_btn.addEventListener("mouseover", () => {
-//         hover_area.style.animation = "fade-up .5s ease-in-out forwards alternate"
-//     })
-//     hover_btn.addEventListener("mouseleave", () => {
-//         hover_area.style.animation = "fade-down .5s ease-in-out forwards alternate"
-//     })
-// }
-
+increase_button.forEach((btn , index) => {
+  btn.addEventListener("click", () => { 
+    let inputValue = parseInt(cart_value_input[index].value);
+    cart_value_input[index].value = inputValue+1;
+   
+  })
+})
+decrease_button.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    let input_value = parseInt(cart_value_input[index].value);
+    if(input_value > 1)
+    cart_value_input[index].value = input_value-1;
+  })
+})

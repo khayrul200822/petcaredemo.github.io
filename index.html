@@ -16,6 +16,83 @@
 </head>
 
 <body>
+    <!--side cart-->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header side_cart_header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel"> <i class="fa-solid fa-bag-shopping me-2 "></i>My Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                    class="fa-solid fa-x"></i></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="cart_product_container d-flex flex-column gap-4">
+                <div class="single_c_product d-flex align-items-center position-relative ">
+                    <span class="cart_delete"><i class="fa-solid fa-x"></i></span>
+                    <div class="cart_img">
+                        <span class="cart_no">01</span>
+                        <img class="img-fluid" src="img/pet-02.png" alt="cart image">
+                    </div>
+                    <div class="cart_info">
+                        <h3>Pet Soft Bad</h3>
+                        <div class="price_cart d-flex align-items-center">
+                            <span>$20</span>
+                            <div class="add_cart d-flex align-items-center">
+                                <span class="decrease"><i class="fa-solid fa-minus"></i></span>
+                                <input type="number" class="cart_value" min="1" value="1">
+                                <span class="increase"><i class="fa-solid fa-plus"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single_c_product d-flex align-items-center position-relative ">
+                    <span class="cart_delete"><i class="fa-solid fa-x"></i></span>
+                    <div class="cart_img">
+                        <span class="cart_no">02</span>
+                        <img class="img-fluid" src="img/pet-01.png" alt="cart image">
+                    </div>
+                    <div class="cart_info">
+                        <h3>Pet Soft Bad</h3>
+                        <div class="price_cart d-flex align-items-center">
+                            <span>$40</span>
+                            <div class="add_cart d-flex align-items-center">
+                                <span class="decrease"><i class="fa-solid fa-minus"></i></span>
+                                <input type="number" class="cart_value" min="1" value="1">
+                                <span class="increase"><i class="fa-solid fa-plus"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single_c_product d-flex align-items-center position-relative ">
+                    <span class="cart_delete"><i class="fa-solid fa-x"></i></span>
+                    <div class="cart_img">
+                        <span class="cart_no">03</span>
+                        <img class="img-fluid" src="img/pet-09.png" alt="cart image">
+                    </div>
+                    <div class="cart_info">
+                        <h3>Comftable bed for cat</h3>
+                        <div class="price_cart d-flex align-items-center">
+                            <span>$50</span>
+                            <div class="add_cart d-flex align-items-center">
+                                <span class="decrease"><i class="fa-solid fa-minus"></i></span>
+                                <input type="number" class="cart_value" min="1" value="1">
+                                <span class="increase"><i class="fa-solid fa-plus"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart_bottom">
+                <div class="subtotal d-flex align-items-center justify-content-between">
+                    <h4>Subtotal</h4>
+                    <span class="price">$128</span>
+                </div>
+                <div class="side_cart_buttons d-flex flex-column justify-content-center">
+                    <a href="#"><span>Checkout</span></a>
+                    <a href="#" class="cart_edit"><span>Edit Cart</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
         <!--top header-->
         <div class="top-haeder">
@@ -89,7 +166,8 @@
                     <div class="side_option">
                         <a class="user_auth" href="#"><i class="fa-regular fa-user"></i></a>
                         <a class="favorite" href="#"><i class="fa-regular fa-heart"></i></a>
-                        <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a class="cart" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                            aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
                 </div>
             </div>
@@ -138,7 +216,19 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li class="list-unstyled"><a href="#">Element</a></li>
+                                <li class="list-unstyled">
+                                    <a href="#">Element<i class="fa-solid fa-angle-down ms-2"></i></a>
+                                    <div class="dropdown_menu">
+                                        <ul class="ps-0 mb-0">
+                                            <li class="list-unstyled"><a href="#">Product Element</a></li>
+                                            <li class="list-unstyled"><a href="#">Element -01</a></li>
+                                            <li class="list-unstyled"><a href="#">Element -02</a></li>
+                                            <li class="list-unstyled"><a href="#">Element -03</a></li>
+                                            <li class="list-unstyled"><a href="#">Element -04</a></li>
+                                            <li class="list-unstyled"><a href="#">Element -05</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
                                 <li class="list-unstyled"><a href="#">Contact Us</a></li>
                             </ul>
                         </div>
