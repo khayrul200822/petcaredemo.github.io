@@ -1047,6 +1047,9 @@ section#service_offer {
 
  /*responsive code */
  @media only screen and (max-width: 992px) {
+    #service_offer{
+        display: none
+    }
      .menu_icon {
          display: block;
      }
