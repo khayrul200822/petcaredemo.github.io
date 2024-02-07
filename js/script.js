@@ -11,13 +11,22 @@ newsletter_poup_close.addEventListener("click", () => {
 
 //for select item
 const select_option = document.querySelectorAll(".category_option ul li")
-const select_field = document.querySelector(".category_field .field_title");
+const select_field = document.querySelectorAll(".field_value");
 select_option.forEach(option => {
   option.addEventListener("click", () => {
-    select_field.textContent = option.textContent;
-  })
-  
-})
+    // Remove style from previously selected option
+    select_option.forEach(otherOption => {
+      otherOption.style.background = "";
+      otherOption.style.color = "";
+    });
+    option.style.background = "var(--color-two)";
+    option.style.color = "var(--color-three)";
+
+    select_field.forEach(field => {
+      field.textContent = option.textContent;
+    });
+  });
+});
 
 
 //add to cart count
