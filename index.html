@@ -48,8 +48,7 @@
         </div>
     </div>
     <!--small device menu-->
-    <div class="offcanvas offcanvas-start side_menu_item" tabindex="-1" id="offcanvasExample"
-        aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas offcanvas-start side_menu_item" tabindex="-1" id="offcanvasExample">
         <div class="offcanvas-header">
             <div class="logo">
                 <h2>El<span>mart</span></h2>
@@ -245,7 +244,7 @@
                     <div class="side_option">
                         <a class="user_auth" href="#"><i class="fa-regular fa-user"></i></a>
                         <a class="favorite" href="#"><i class="fa-regular fa-heart"></i></a>
-                        <a class="cart" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                        <a class="cart" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                             aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
                 </div>
@@ -275,8 +274,12 @@
                         <div class="search_bar">
                             <form class="search_items align-items-center">
                                 <div class="category">
-                                    <div class="category_field">All Category <span><i
-                                                class="fa-solid fa-chevron-down"></i></span></div>
+                                    <div class="category_field">
+                                        <span class="field_title">All Category </span>
+                                        <span>
+                                            <i class="fa-solidfa-chevron-down"></i>
+                                        </span>
+                                    </div>
                                     <div class="category_option">
                                         <ul class="mb-0 ps-0">
                                             <li class="list-unstyled c_single_option">Pet Food -01</li>
@@ -342,7 +345,7 @@
             </div>
         </div>
     </header>
-    <section id="service_offer">
+    <div id="service_offer">
         <div class="container-fluid container-xl">
             <div class="service_offer_wrapper">
                 <div class="single_s_box d-flex align-items-center gap-2">
@@ -367,7 +370,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     <!--hero section-->
     <!-- <section class="hero_section">
         <div class="container-fluid container-xl">
