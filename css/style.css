@@ -1478,7 +1478,6 @@
          grid-column-end: 3;
      }
  }
-
  @media only screen and (max-width: 668px) {
      .newsletter_wrapper .newsletter_content .social_link {
          display: flex !important;
