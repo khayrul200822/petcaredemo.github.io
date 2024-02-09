@@ -217,6 +217,7 @@
      background: var(--color-one);
      border-radius: 50%;
      opacity: 1;
+     transition: .6s;
  }
 
  .side_menu_item {
@@ -1416,6 +1417,10 @@
     transition: .6s;
     background: var(--color-two);
     color: var(--color-three);
+}
+.side_menu_item button.btn-close:hover {
+    transform: rotate(360deg);
+    transition: .6s;
 }
 
 
