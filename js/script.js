@@ -59,6 +59,20 @@ $(".accordion-title").click(function () {
   $(this).next().slideToggle(300);
 });
 
+// appoinment popup
+const appo_popup = document.querySelector(".appoinment_popup");
+const appo_popup_close = document.querySelector(".appo_close");
+const appo_popup_open = document.querySelectorAll(".slider_button button")
+
+appo_popup_open.forEach(btn => {
+  btn.addEventListener("click", () => {
+    appo_popup.style.display = "flex"
+  })
+})
+
+appo_popup_close.addEventListener("click", () => {
+  appo_popup.style.display = "none"
+})
 
 const swiper = new Swiper('.swiper', {
   loop: true,
@@ -72,18 +86,10 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  // breakpoints: {
-  //   640: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 20,
-  //   },
-  //   768: {
-  //     slidesPerView: 4,
-  //     spaceBetween: 40,
-  //   },
-  //   1024: {
-  //     slidesPerView: 5,
-  //     spaceBetween: 50,
-  //   }
-  // }
+  breakpoints: {
+    1200: {
+      slidesPerView: 2,
+      spaceBetween: 0,
+    }
+  }
 });

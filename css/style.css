@@ -238,15 +238,17 @@
      opacity: 0;
      visibility: hidden;
      transition: .6s;
+     z-index: 9;
  }
 
  .main_menu_container>ul>li .dropdown_menu ul li a {
      display: block;
  }
+
  .main_menu_container>ul>li .dropdown_menu.mega_menu2 {
-    width: 770px;
-    left: -350%;
-}
+     width: 770px;
+     left: -350%;
+ }
 
  .main_header .main_header_wrapper .header_search {
      width: 600px;
@@ -422,6 +424,7 @@
      transform: scaleY(0);
      transform-origin: top;
      transition: .6s;
+     z-index: 9;
  }
 
  .bottom_header_wrapper .side_menu .side_menu_wrapper ul.menu_list>li>a {
@@ -478,6 +481,7 @@
  .bottom_header .social_link a:hover {
      color: var(--color-two);
      transition: .6s;
+     transform: rotate(360deg);
  }
 
  .main_menu_container>ul>li .dropdown_menu>ul>li a {
@@ -522,6 +526,7 @@
      opacity: 1;
      border-radius: 50%;
      color: var(--color-three) !important;
+     transition: .6s;
  }
 
  .btn-close {
@@ -968,10 +973,13 @@
      transform-origin: top right;
      transition: .6s;
  }
+
  .social_link_menu {
-   padding: 30px 0px
+     padding: 30px 0px
  }
- .newsletter_wrapper .newsletter_content .social_link a , .social_link_menu a {
+
+ .newsletter_wrapper .newsletter_content .social_link a,
+ .social_link_menu a {
      width: 35px;
      height: 35px;
      display: grid;
@@ -1005,6 +1013,7 @@
      background: var(--color-one);
      color: var(--color-three);
      transition: .6s;
+     transform: rotate(360deg);
  }
 
  .newsletter_popup .newsletter_container .newsletter_wrapper .n_popup_img:hover::after {
@@ -1044,7 +1053,8 @@
      font-weight: 500;
  }
 
- .newsletter_wrapper .newsletter_content .social_link a:hover ,.social_link_menu a:hover{
+ .newsletter_wrapper .newsletter_content .social_link a:hover,
+ .social_link_menu a:hover {
      transform: scale(.9);
      transition: .6s;
      background: var(--color-one);
@@ -1129,31 +1139,288 @@
      margin: 17px 0px;
      border-radius: 5px;
  }
- .cat_img{
-    width: 60%;
-    margin: auto;
+
+ .cat_img {
+     width: 60%;
+     margin: auto;
  }
- 
+
  .bottom_header_wrapper .side_menu .side_menu_wrapper ul.menu_list>li:hover .mega_menu {
-    opacity: 1;
-    visibility: visible;
+     opacity: 1;
+     visibility: visible;
+     transition: .6s;
+     transform: translate(100%, 0px);
+ }
+
+ .mega_menu2 h4 {
+     color: var(--color-two);
+     font-size: 16px;
+     font-weight: 500;
+ }
+
+ .mega_menu2 .single_menu_part {
+     padding: 30px 15px;
+ }
+
+ .mega_menu2 ul>li>a {
+     color: black;
+     font-weight: 400;
+     padding: 5px;
+     font-size: 14px;
+ }
+
+ /*appoinment popup style*/
+ .appoinment_popup {
+     width: 100%;
+     position: fixed;
+     height: 100vh;
+     display: none;
+     align-items: center;
+     justify-content: center;
+     z-index: 999;
+
+ }
+
+ .appoinment_popup .appo_bg {
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.445);
+     position: absolute;
+     z-index: -1;
+ }
+
+ .appoinment_popup .appoinment_wrapper {
+     width: 750px;
+     height: calc(100vh - 50px);
+     background-color: var(--color-three);
+     border-radius: 15px;
+     overflow: hidden;
+     position: relative;
+ }
+
+ .appoinment_popup .appoinment_wrapper .appo_close {
+     width: 30px;
+     height: 30px;
+     display: grid;
+     place-items: center;
+     position: absolute;
+     background-color: var(--color-two);
+     color: var(--color-three);
+     right: 10px;
+     top: 10px;
+     border-radius: 50%;
+     cursor: pointer;
+
+ }
+
+ .appoinment_popup .appoinment_wrapper .appo_close svg {
+     transition: .6s;
+ }
+
+ .appoinment_popup .appoinment_wrapper .appo_close:hover svg {
+     transform: rotate(180deg);
+     transition: .6s;
+ }
+
+ .appoinment_popup .appoinment_wrapper .single_info .main_info h4 {
+     font-size: 16px;
+     font-weight: 700;
+     color: var(--color-three);
+ }
+
+ .appoinment_popup .appoinment_wrapper .single_info .info_img svg {
+     font-size: 30px;
+     color: var(--color-one);
+ }
+
+ .appoinment_popup .appoinment_wrapper .single_info .main_info p {
+     margin-bottom: 3px;
+     font-size: 13px;
+     color: #c3c3c3;
+ }
+
+ .appoinment_info {
+     display: flex;
+     flex-direction: column;
+     gap: 50px;
+ }
+
+ .appoinment_left {
+     display: flex;
+     flex-direction: column;
+     gap: 50px;
+     width: 40%;
+     height: 100%;
+     justify-content: center;
+     background: var(--color-two);
+     padding: 20px;
+ }
+
+ .appoinment_popup .appoinment_wrapper .appoinment_form {
+     width: 60%;
+     padding: 15px;
+ }
+
+ .appoinment_popup .appoinment_wrapper .appoinment_form form {
+     width: 100%;
+ }
+
+ .appoinment_popup .appoinment_wrapper .appoinment_form form>input,
+ select {
+     width: 100%;
+     padding: 10px;
+     font-size: 14px;
+     outline: 1px solid transparent;
+     margin-bottom: 15px;
+     border-radius: 5px;
+     border: 1px solid var(--color-two);
+     transition: .6s;
+ }
+
+ .appoinment_form form input::-webkit-inner-spin-button,
+ .appoinment_form form input::-webkit-outer-spin-button {
+     appearance: none;
+ }
+
+ .appoinment_form form input,
+ textarea {
+     padding: 10px;
+     font-size: 14px;
+     outline: none;
+     margin-bottom: 15px;
+     border-radius: 5px;
+     border: 1px solid var(--color-two);
+ }
+
+ .single_input {
+     display: flex;
+     gap: 10px;
+ }
+
+ .single_input input {
+     width: 50%;
+ }
+
+ .appoinment_form form textarea {
+     width: 100%;
+     height: 100px;
+ }
+
+ .appoinment_popup .appoinment_wrapper .appoinment_form button {
+     outline: none;
+     border: 1px solid transparent;
+     padding: 12px 51px;
+     border-radius: 50px;
+     background: var(--color-two);
+     color: var(--color-three);
+     font-size: 15px;
+     font-weight: 600;
+ }
+
+ .appoinment_popup .appoinment_wrapper .appoinment_form h3 {
+     font-size: 22px;
+     font-weight: 700;
+     margin-bottom: 15px;
+ }
+
+ .appoinment_popup .appoinment_wrapper .appoinment_form form>input:focus,
+ select:focus,
+ textarea:focus,
+ .single_input input:focus {
+     outline: 2px solid var(--color-two);
+     outline-offset: 2px;
+     transition: .6s;
+ }
+
+ /*hero section style*/
+.slider_part {
+     gap: 30px;
+     background: var(--color-two);
+     padding: 25px;
+     height: 70vh;
+ }
+
+ /* .slider_part .slider_content{
+    width: 60%;
+} */
+
+ .slider_content {
+     width: 75%;
+ }
+
+ .slider_content a {
+     font-size: 14px;
+     color: #c3c3c3;
+ }
+
+ .slider_content h2 {
+     font-size: 35px;
+     font-weight: 700;
+     color: white;
+     line-height: 3rem;
+     margin-bottom: 15px;
+     margin-top: 10px;
+ }
+
+ .slider_content p {
+     font-size: 14px;
+     color: #ffffffd4;
+     font-weight: 300;
+ }
+
+ .single_slider .slider_part.last-child {
+     background: var(--color-one);
+ }
+
+ .slider_button button {
+     font-size: 16px;
+     font-weight: 600;
+     padding: 10px 30px;
+     outline: none;
+     border: 1px solid transparent;
+     border-radius: 50px;
+     background-color: var(--color-three);
+     color: var(--color-four);
+     margin-top: 15px;
+     transition: .6s;
+ }
+
+ .slider_part.last-child {
+    background: var(--color-one);
+}
+.swiper-button-prev,.swiper-button-next{
+    width: 40px !important;
+    height: 40px !important;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background-color: var(--color-three);
+}
+.swiper-button-prev::after,.swiper-button-next::after{
+    font-size: 18px !important;
+    color: var(--color-four);
+}
+.side_cart_header button.btn-close:hover {
+    background: var(--color-one);
     transition: .6s;
-    transform: translate(100%, 0px);
+    transform: rotate(360deg);
 }
-.mega_menu2 h4 {
-    color: var(--color-two);
-    font-size: 16px;
-    font-weight: 500;
+.slider_button button:hover {
+    transition: .6s;
+    background: var(--color-one);
+    color: var(--color-three);
 }
-.mega_menu2 .single_menu_part{
-    padding: 30px 15px;
+
+.slider_part.last-child .slider_button button:hover {
+    transition: .6s;
+    background: var(--color-two);
+    color: var(--color-three);
 }
-.mega_menu2 ul > li > a {
-    color: black;
-    font-weight: 400;
-    padding: 5px;
-    font-size: 14px;
-}
+
+
+
+
+
 
 
 

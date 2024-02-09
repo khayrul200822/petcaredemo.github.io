@@ -16,7 +16,71 @@
 </head>
 
 <body>
-
+    <!--appoinetment_form-->
+    <div class="appoinment_popup">
+        <div class="appo_bg"></div>
+        <div class="appoinment_wrapper d-flex align-items-center ">
+            <span class="appo_close"><i class="fa-solid fa-x"></i></span>
+            <div class="appoinment_left">
+                <div class="appoinment_info">
+                    <div class="single_info d-flex gap-3">
+                        <div class="info_img">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div class="main_info">
+                            <h4>Opening Hours</h4>
+                            <p>Weekdays: 09.00 am - 05.00 pm</p>
+                            <p>Weekends: 09.00 am - 01.00 pm</p>
+                        </div>
+                    </div>
+                    <div class="single_info d-flex gap-3">
+                        <div class="info_img">
+                            <i class="fa-solid fa-envelope-open"></i>
+                        </div>
+                        <div class="main_info">
+                            <h4>Pickup & Collection Time</h4>
+                            <p>Weekdays: 09.00 am - 05.00 pm</p>
+                            <p>Weekends: 09.00 am - 01.00 pm</p>
+                        </div>
+                    </div>
+                    <div class="single_info d-flex gap-3">
+                        <div class="info_img">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <div class="main_info">
+                            <h4>Address</h4>
+                            <p>123 South road, ABC Tower, Tower</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="appoinment_form">
+                <h3>Get Appoinment</h3>
+                <form>
+                    <input type="text" id="name" placeholder="Your name" required>
+                    <input type="text" id="address" placeholder="Your address" required>
+                    <div class="single_input">
+                        <input type="email" id="email" placeholder="Your email" required>
+                        <input type="number" id="phone" placeholder="Your number">
+                    </div>
+                    <div class="single_input">
+                        <input type="date" id="date" required>
+                        <input type="time" id="time" required>
+                    </div>
+                    <select>
+                        <option value="0" selected disabled>Pet Boarding</option>
+                        <option value="">Cat Boarding</option>
+                        <option value="">Dog Boarding</option>
+                        <option value="">Bird Boarding</option>
+                    </select>
+                    <textarea id="message" cols="30" rows="10" placeholder="Write your message..."></textarea>
+                    <div class="form_btn">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <!--newsletter popup-->
     <div class="newsletter_popup">
         <div class="popup_bg"></div>
@@ -61,7 +125,7 @@
                 <a href="#" class="menu_item"><i class="fa-regular fa-user"></i> Login/Register</a>
                 <a href="index.html" class="accordion-title menu_item">Home</a>
                 <div class="accordion-content">
-                    <a href="index.html">Home page 1</a>
+                    <a href="#">Home page 1</a>
                     <a href="#">Home page 2</a>
                     <a href="#">Home page 3</a>
                 </div>
@@ -403,6 +467,24 @@
                                                     <li class="list-unstyled"><a href="#">Budgie Grains</a></li>
                                                 </ul>
                                             </div>
+                                            <div class="single_menu_product">
+                                                <div class="menu_product_img">
+                                                    <img class="img-fluid" src="img/tutles.png" alt="mega menu image">
+                                                    <h2>Turtles Smart Feshion</h2>
+                                                    <b>$60</b>
+                                                    <a href="#">Buy Now</a>
+                                                </div>
+                                            </div>
+                                            <div class="single_part">
+                                                <h3>Type Of Turtles</h3>
+                                                <ul class="ps-0 mb-0">
+                                                    <li class="list-unstyled"><a href="#">Cockatoos</a></li>
+                                                    <li class="list-unstyled"><a href="#">Budgerigar</a></li>
+                                                    <li class="list-unstyled"><a href="#">Cockatiel</a></li>
+                                                    <li class="list-unstyled"><a href="#">Lovebirds</a></li>
+                                                    <li class="list-unstyled"><a href="#">Columbidae</a></li>
+                                                </ul>
+                                            </div>
                                             <div class="single_part">
                                                 <h3>Turtles Diseases</h3>
                                                 <ul class="ps-0 mb-0">
@@ -441,9 +523,31 @@
                                             </div>
                                             <div class="single_menu_product">
                                                 <div class="menu_product_img">
-                                                    <img class="img-fluid cat_img" src="img/pet-08.png"
-                                                        alt="mega menu image">
+                                                    <img class="img-fluid" src="img/cat-03.png" alt="mega menu image">
+                                                    <h2>Cat Smart Feshion</h2>
+                                                    <b>$60</b>
+                                                    <a href="#">Buy Now</a>
                                                 </div>
+                                            </div>
+                                            <div class="single_part">
+                                                <h3>Type Of Cat</h3>
+                                                <ul class="ps-0 mb-0">
+                                                    <li class="list-unstyled"><a href="#">Cockatoos</a></li>
+                                                    <li class="list-unstyled"><a href="#">Budgerigar</a></li>
+                                                    <li class="list-unstyled"><a href="#">Cockatiel</a></li>
+                                                    <li class="list-unstyled"><a href="#">Lovebirds</a></li>
+                                                    <li class="list-unstyled"><a href="#">Columbidae</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="single_part">
+                                                <h3>Cat Diseases</h3>
+                                                <ul class="ps-0 mb-0">
+                                                    <li class="list-unstyled"><a href="#">Avian influenza</a></li>
+                                                    <li class="list-unstyled"><a href="#">Iodine deficiency</a></li>
+                                                    <li class="list-unstyled"><a href="#">Candidiasis</a></li>
+                                                    <li class="list-unstyled"><a href="#">Parasites</a></li>
+                                                    <li class="list-unstyled"><a href="#">Iodine deficiency</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </li>
@@ -544,8 +648,55 @@
                                                     </ul>
                                                 </div>
                                             </div>
+                                            <div class="col-3">
+                                                <div class="single_menu_part">
+                                                    <h4>Elements</h4>
+                                                    <ul class="ps-0 mb-0">
+                                                        <li class="list-unstyled"><a href="#">#Element -01</a></li>
+                                                        <li class="list-unstyled"><a href="#">#Element -02</a></li>
+                                                        <li class="list-unstyled"><a href="#">#Element -03</a></li>
+                                                        <li class="list-unstyled"><a href="#">#Element -04</a></li>
+                                                        <li class="list-unstyled"><a href="#">#Element -05</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="single_menu_part">
+                                                    <h4>Product Style</h4>
+                                                    <ul class="ps-0 mb-0">
+                                                        <li class="list-unstyled"><a href="#"> #Style -01</a></li>
+                                                        <li class="list-unstyled"><a href="#"> #Style -02</a></li>
+                                                        <li class="list-unstyled"><a href="#"> #Style -03</a></li>
+                                                        <li class="list-unstyled"><a href="#"> #Style -04</a></li>
+                                                        <li class="list-unstyled"><a href="#"> #Style -05</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="single_menu_part">
+                                                    <h4>Custom Layout</h4>
+                                                    <ul class="ps-0 mb-0">
+                                                        <li class="list-unstyled"><a href="#">#Layout -01</a></li>
+                                                        <li class="list-unstyled"><a href="#">#Layout -02</a></li>
+                                                        <li class="list-unstyled"><a href="#">#Layout -03</a></li>
+                                                        <li class="list-unstyled"><a href="#">#Layout -04</a></li>
+                                                        <li class="list-unstyled"><a href="#">#Layout -05</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="single_menu_part">
+                                                    <h4>Category Design</h4>
+                                                    <ul class="ps-0 mb-0">
+                                                        <li class="list-unstyled"><a href="#">#Design -01</a></li>
+                                                        <li class="list-unstyled"><a href="#">#Design -02</a></li>
+                                                        <li class="list-unstyled"><a href="#">#Design -03</a></li>
+                                                        <li class="list-unstyled"><a href="#">#Design -04</a></li>
+                                                        <li class="list-unstyled"><a href="#">#Design -05</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
-
                                     </div>
                                 </li>
                                 <li class="list-unstyled">
@@ -613,20 +764,82 @@
     </div>
     <!--hero section-->
     <section class="hero_section">
-        <div class="container-fluid container-xl">
+        <div class="container-fluid container-xxl">
             <div class="hero_secction_wrapper">
                 <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
+                            <div class="single_slider">
+                                <div class="slider_part d-flex align-items-center">
+                                    <div class="slider_content">
+                                        <a href="#">Accessories</a>
+                                        <h2>Care Of Your <br>Little Pets</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+                                            consectetur, ea aliquam architecto corporis sunt.</p>
+                                        <div class="slider_button">
+                                            <button><span>Get Appoinment</span></button>
+                                        </div>
+                                    </div>
+                                    <div class="slider_img">
+                                        <img class="img-fluid" src="img/cat-03.png" alt="hero section">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider_part last-child d-flex align-items-center ">
+                                <div class="slider_content">
+                                    <a href="#">Accessories</a>
+                                    <h2>Everything Your<br> Pet Needs</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+                                        consectetur, ea aliquam architecto corporis sunt.</p>
+                                    <div class="slider_button">
+                                        <button>Get Appoinment</button>
+                                    </div>
+                                </div>
+                                <div class="slider_img">
+                                    <img class="img-fluid" src="img/pet-07.png" alt="hero section">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider_part d-flex align-items-center ">
+                                <div class="slider_content">
+                                    <a href="#">Accessories</a>
+                                    <h2>Everything Your<br> Pet Needs</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+                                        consectetur, ea aliquam architecto corporis sunt.</p>
+                                    <div class="slider_button">
+                                        <button>Get Appoinment</button>
+                                    </div>
+                                </div>
+                                <div class="slider_img">
+                                    <img class="img-fluid" src="img/cat-02.png" alt="hero section">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider_part last-child d-flex align-items-center ">
+                                <div class="slider_content">
+                                    <a href="#">Accessories</a>
+                                    <h2>Everything Your<br> Pet Needs</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+                                        consectetur, ea aliquam architecto corporis sunt.</p>
+                                    <div class="slider_button">
+                                        <button>Get Appoinment</button>
+                                    </div>
+                                </div>
+                                <div class="slider_img">
+                                    <img class="img-fluid" src="img/pet-09.png" alt="hero section">
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
             </div>
-        </div>
     </section>
-
 
     <!-- script -->
     <script src="js/all.min.js"></script>
