@@ -1431,11 +1431,11 @@
  }
 
  .appoinment_popup .appoinment_wrapper .appoinment_form button:hover {
-    background: white;
-    border: 1px solid var(--color-two);
-    transition: .6s;
-    color: var(--color-two);
-}
+     background: white;
+     border: 1px solid var(--color-two);
+     transition: .6s;
+     color: var(--color-two);
+ }
 
 
 
@@ -1451,6 +1451,12 @@
 
 
  /*responsive code */
+ @media only screen and (max-width: 1200px) {
+     .slider_content {
+         width: 50%;
+     }
+ }
+
  @media only screen and (max-width: 1033px) {
      #service_offer {
          display: none
@@ -1531,21 +1537,27 @@
  }
 
  @media only screen and (max-width: 668px) {
-    .slider_img img {
-        width: 70%;
-    }
-    
     .slider_img {
-        display: flex;
-        justify-content: center;
-    }
-    .slider_part {
-        flex-direction: column;
+        height: 300px;
     }
     
-    .slider_content {
-        order: 2;
+    .slider_img img {
+        object-fit: contain;
     }
+     .slider_img {
+         display: flex;
+         justify-content: center;
+     }
+
+     .slider_part {
+         flex-direction: column;
+     }
+
+     .slider_content {
+        width: 100%;
+         order: 2;
+     }
+
      .newsletter_wrapper .newsletter_content .social_link {
          display: flex !important;
      }
