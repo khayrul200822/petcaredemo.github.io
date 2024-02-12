@@ -86,6 +86,7 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  
   breakpoints: {
     1200: {
       slidesPerView: 2,

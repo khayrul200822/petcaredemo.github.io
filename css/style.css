@@ -1356,16 +1356,16 @@
  }
 
  .slider_content h2 {
-     font-size: 35px;
+     font-size: 40px;
      font-weight: 700;
      color: white;
-     line-height: 3rem;
+     line-height: 4rem;
      margin-bottom: 15px;
      margin-top: 10px;
  }
 
  .slider_content p {
-     font-size: 14px;
+     font-size: 15px;
      color: #ffffffd4;
      font-weight: 300;
  }
@@ -1437,7 +1437,9 @@
      color: var(--color-two);
  }
 
-
+.hero_section .container-fluid{
+    padding: 0  !important;
+}
 
 
 
@@ -1537,6 +1539,9 @@
  }
 
  @media only screen and (max-width: 668px) {
+    .category{
+        width: 130px;
+    }
     .slider_img {
         height: 300px;
     }
