@@ -75,6 +75,17 @@ appo_popup_close.addEventListener("click", () => {
 })
 
 const swiper = new Swiper('.swiper', {
+  effect: 'creative',
+  creativeEffect: {
+    prev: {
+      // will set `translateZ(-400px)` on previous slides
+      translate: [0, 0, -400],
+    },
+    next: {
+      // will set `translateX(100%)` on next slides
+      translate: ['100%', 0, 0],
+    },
+  },
   loop: true,
   slidesPerView: 1,
   spaceBetween: 20,
