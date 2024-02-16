@@ -1,3 +1,13 @@
+const preloader_area = document.querySelector(".preloader")
+window.addEventListener("load", () => {
+  setTimeout(() => {
+ preloader_area.style.display = "none"
+  },2000)
+})
+
+
+
+
 // newsletter popup
 const newsletter_poup_close = document.querySelector(".newsletter_close");
 const newsletter_popup = document.querySelector(".newsletter_popup")
