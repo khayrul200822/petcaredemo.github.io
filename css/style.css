@@ -1516,7 +1516,15 @@
 .hero_bottom_section {
     padding-bottom: 99px;
 }
+.hero_bottm_wrapper .single_item:first-child .item_button a:hover {
+    background: var(--color-two);
+    transition: .6s;
+}
 
+.hero_bottm_wrapper .single_item:last-child .item_button a:hover {
+    background: var(--color-one);
+    transition: .6s;
+}
 
 
 
