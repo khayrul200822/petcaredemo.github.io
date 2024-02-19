@@ -156,6 +156,62 @@ hover_product.forEach(p => {
 })
 
 
+var swiper = new Swiper(".mySwiper4", {
+  loop: true,
+  slidesPerView: 2,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: '.swiper-button-next4',
+    prevEl: '.swiper-button-prev4',
+  },
+  breakpoints: {
+    500: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 5,
+      spaceBetween: 40,
+    },
+    1035: {
+      slidesPerView: 5,
+      spaceBetween: 40,
+    },
+  },
+});
+
+var swiper = new Swiper(".mySwiper3", {
+  // loop: true,
+  slidesPerView: 1,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: '.swiper-button-next3',
+    prevEl: '.swiper-button-prev3',
+  },
+  breakpoints: {
+    500: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1035: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+  },
+});
+
 
 var swiper = new Swiper(".mySwiper2", {
   // loop: true,
