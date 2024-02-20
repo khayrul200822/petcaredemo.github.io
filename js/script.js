@@ -18,7 +18,21 @@ setTimeout(() => {
 newsletter_poup_close.addEventListener("click", () => {
   newsletter_popup.style.transform = "scale(0)";
 })
-
+//get elements
+const optionMenu = document.querySelectorAll(".currency_option li");
+const option_value = document.querySelector(".value_area");
+const language_option = document.querySelectorAll(".ln_option li")
+const language_value =document.querySelector(".ln_value");
+optionMenu.forEach(item => {
+    item.addEventListener("click" , () => {
+        option_value.textContent = item.textContent;
+    })
+})
+language_option.forEach(ln_item => {
+    ln_item.addEventListener("click" , () => {
+        language_value.textContent = ln_item.textContent;
+    })
+})
 //for select item
 const select_option = document.querySelectorAll(".category_option ul li")
 const select_field = document.querySelectorAll(".field_value");
@@ -155,6 +169,59 @@ hover_product.forEach(p => {
   })
 })
 
+const quick_view_area = document.querySelector(".quick_view_popup")
+const quick_view_btn = document.querySelector(".close_quick_view")
+const quick_view_open = document.querySelectorAll(".quick_view_btn");
+quick_view_open.forEach(btn => {
+  btn.addEventListener("click", () => {
+    quick_view_area.style.display = "flex"
+  })
+})
+// const quick_view_btn = document.querySelector(".close_quick_view")
+quick_view_btn.addEventListener("click" , () => {
+  quick_view_area.style.display = "none"
+})
+
+//script for adding gallary
+var swiper = new Swiper(".mySwiper6", {
+  spaceBetween: 1,
+  slidesPerView: 3,
+  freeMode: true,
+  watchSlidesProgress: true,
+  pagination: {
+    el: ".swiper-pagination6",
+    clickable: true,
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    380: {
+      slidesPerView: 2,
+      spaceBetween: 10
+    },
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 10
+    },
+    // when window width is >= 480px
+    668: {
+      slidesPerView: 3,
+      spaceBetween: 10
+    },
+
+  }
+})
+var swiper3 = new Swiper(".mySwiper5", {
+  spaceBetween: 30,
+
+  navigation: {
+    nextEl: ".swiper-button-next5",
+    prevEl: ".swiper-button-prev5",
+  },
+  thumbs: {
+    swiper: swiper,
+  }
+}
+);
 
 var swiper = new Swiper(".mySwiper4", {
   loop: true,

@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/jquery-backToTop.min.css">
-    <link rel="stylesheet" href="css/jquery.pajinatify.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
@@ -23,6 +22,127 @@
             <img class="img-fluid" src="img/pet_preloader.gif" alt="preloader image" />
         </div>
     </div>
+    <!--product quick view-->
+    <div class="quick_view_popup">
+        <div class="popup_bg"></div>
+        <div class="quick_view_wrapper">
+            <span class="close_quick_view"><i class="fa-solid fa-x"></i></span>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="left_side">
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper5">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide ">
+                                    <div class="img_area">
+                                        <img class="img-fluid " src="img/product-2.png" alt="slider product image" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide ">
+                                    <div class="img_area">
+                                        <img class="img-fluid " src="img/product-3.png" alt="slider product image" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class=" img_area">
+                                        <img class="img-fluid " src="img/product-4.png" alt="slider product image" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class=" img_area">
+                                        <img class="img-fluid " src="img/product-5.png" alt="slider product image" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next swiper-button-next5 custom-color"></div>
+                            <div class="swiper-button-prev swiper-button-prev5 custom-color"></div>
+                        </div>
+                        <div class="swiper mySwiper6 thumbs-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="thub_img">
+                                        <img class="img-fluid " src="img/product-1.png" alt="slider product image" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thub_img">
+                                        <img class="img-fluid " src="img/product-2.png" alt="slider product image" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thub_img">
+                                        <img class="img-fluid " src="img/product-3.png" alt="slider product image" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thub_img">
+                                        <img class="img-fluid " src="img/product-4.png" alt="slider product image" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thub_img">
+                                        <img class="img-fluid " src="img/product-5.png" alt="slider product image" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination swiper-pagination6"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="right_side">
+                        <a href="#">Pet Care</a>
+                        <h3 class="p_title">Dog/Pet Beautiful Carrier</h3>
+                        <p class="quick_price">$120</p>
+                        <div class="rating_info">
+                            <table class="rating">
+                                <tr>
+                                    <td>Rating:</td>
+                                    <td>
+                                        <div class="rating_star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Availability:
+                                    </td>
+                                    <td>
+                                        <b>In Stock</b>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <p class="product_des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptate
+                            dolor illum voluptas. Omnis molestias dolorum necessitatibus, ducimus magni.</p>
+                        <div class="product_option_area d-flex align-items-center gap-4">
+                            <div class="quantity">
+                                <h4>Quantity</h4>
+                                <div class="quantity_wrapper d-flex align-items-center ">
+                                    <span class="decrease"><i class="fa-solid fa-minus"></i></span>
+                                    <input type="number" class="cart_value" min="1" value="1">
+                                    <span class="increase"><i class="fa-solid fa-plus"></i></span>
+                                </div>
+                            </div>
+                            <ul class="ps-0 mb-0">
+                                <li class="list-unstyled"><b>SKU</b> 23442</li>
+                                <li class="list-unstyled"><b>Tags:</b> pet care</li>
+                            </ul>
+                        </div>
+                        <div class="add_btn mt-5">
+                            <a href="#">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--appoinetment_form-->
     <div class="appoinment_popup">
         <div class="appo_bg"></div>
@@ -1078,7 +1198,8 @@
                                         <div class="product_option">
                                             <div class="single_option"><i class="fa-regular fa-heart"></i></div>
                                             <div class="single_option"><i class="fa-solid fa-shuffle"></i></div>
-                                            <div class="single_option"><i class="fa-regular fa-eye"></i></div>
+                                            <div class="single_option quick_view_btn"><i class="fa-regular fa-eye"></i>
+                                            </div>
                                         </div>
                                         <div class="product_status d-flex flex-column justify-content-center gap-2 ">
                                             <div class="single_status">Hot</div>
@@ -1121,7 +1242,8 @@
                                         <div class="product_option">
                                             <div class="single_option"><i class="fa-regular fa-heart"></i></div>
                                             <div class="single_option"><i class="fa-solid fa-shuffle"></i></div>
-                                            <div class="single_option"><i class="fa-regular fa-eye"></i></div>
+                                            <div class="single_option quick_view_btn"><i class="fa-regular fa-eye"></i>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="ts_product_info">
@@ -1161,7 +1283,8 @@
                                         <div class="product_option">
                                             <div class="single_option"><i class="fa-regular fa-heart"></i></div>
                                             <div class="single_option"><i class="fa-solid fa-shuffle"></i></div>
-                                            <div class="single_option"><i class="fa-regular fa-eye"></i></div>
+                                            <div class="single_option quick_view_btn"><i class="fa-regular fa-eye"></i>
+                                            </div>
                                         </div>
                                         <div class="product_status d-flex flex-column justify-content-center gap-2 ">
                                             <div class="single_status">-50%</div>
@@ -1204,7 +1327,8 @@
                                         <div class="product_option">
                                             <div class="single_option"><i class="fa-regular fa-heart"></i></div>
                                             <div class="single_option"><i class="fa-solid fa-shuffle"></i></div>
-                                            <div class="single_option"><i class="fa-regular fa-eye"></i></div>
+                                            <div class="single_option quick_view_btn"><i class="fa-regular fa-eye"></i>
+                                            </div>
                                         </div>
                                         <div class="product_status d-flex flex-column justify-content-center gap-2 ">
                                             <div class="single_status_n">New</div>
@@ -1247,7 +1371,8 @@
                                         <div class="product_option">
                                             <div class="single_option"><i class="fa-regular fa-heart"></i></div>
                                             <div class="single_option"><i class="fa-solid fa-shuffle"></i></div>
-                                            <div class="single_option"><i class="fa-regular fa-eye"></i></div>
+                                            <div class="single_option quick_view_btn"><i class="fa-regular fa-eye"></i>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="ts_product_info">
@@ -1287,7 +1412,8 @@
                                         <div class="product_option">
                                             <div class="single_option"><i class="fa-regular fa-heart"></i></div>
                                             <div class="single_option"><i class="fa-solid fa-shuffle"></i></div>
-                                            <div class="single_option"><i class="fa-regular fa-eye"></i></div>
+                                            <div class="single_option quick_view_btn"><i class="fa-regular fa-eye"></i>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="ts_product_info">
@@ -1327,7 +1453,8 @@
                                         <div class="product_option">
                                             <div class="single_option"><i class="fa-regular fa-heart"></i></div>
                                             <div class="single_option"><i class="fa-solid fa-shuffle"></i></div>
-                                            <div class="single_option"><i class="fa-regular fa-eye"></i></div>
+                                            <div class="single_option quick_view_btn"><i class="fa-regular fa-eye"></i>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="ts_product_info">
@@ -1367,7 +1494,8 @@
                                         <div class="product_option">
                                             <div class="single_option"><i class="fa-regular fa-heart"></i></div>
                                             <div class="single_option"><i class="fa-solid fa-shuffle"></i></div>
-                                            <div class="single_option"><i class="fa-regular fa-eye"></i></div>
+                                            <div class="single_option quick_view_btn"><i class="fa-regular fa-eye"></i>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="ts_product_info">
@@ -1765,7 +1893,6 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery-backToTop.min.js"></script>
-    <script src="js/jquery.pajinatify.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
