@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/jquery-backToTop.min.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/aos.css">
 </head>
 
 <body>
@@ -35,22 +36,22 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide ">
                                     <div class="img_area">
-                                        <img class="img-fluid " src="img/product-2.png" alt="slider product image" />
+                                        <img class="img-fluid" src="img/product-2.png" alt="slider product image" />
                                     </div>
                                 </div>
                                 <div class="swiper-slide ">
                                     <div class="img_area">
-                                        <img class="img-fluid " src="img/product-3.png" alt="slider product image" />
+                                        <img class="img-fluid" src="img/product-3.png" alt="slider product image" />
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class=" img_area">
-                                        <img class="img-fluid " src="img/product-4.png" alt="slider product image" />
+                                        <img class="img-fluid" src="img/product-4.png" alt="slider product image" />
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class=" img_area">
-                                        <img class="img-fluid " src="img/product-5.png" alt="slider product image" />
+                                        <img class="img-fluid" src="img/product-5.png" alt="slider product image" />
                                     </div>
                                 </div>
                             </div>
@@ -61,27 +62,27 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="thub_img">
-                                        <img class="img-fluid " src="img/product-1.png" alt="slider product image" />
+                                        <img class="img-fluid" src="img/product-1.png" alt="slider product image" />
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="thub_img">
-                                        <img class="img-fluid " src="img/product-2.png" alt="slider product image" />
+                                        <img class="img-fluid" src="img/product-2.png" alt="slider product image" />
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="thub_img">
-                                        <img class="img-fluid " src="img/product-3.png" alt="slider product image" />
+                                        <img class="img-fluid" src="img/product-3.png" alt="slider product image" />
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="thub_img">
-                                        <img class="img-fluid " src="img/product-4.png" alt="slider product image" />
+                                        <img class="img-fluid" src="img/product-4.png" alt="slider product image" />
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="thub_img">
-                                        <img class="img-fluid " src="img/product-5.png" alt="slider product image" />
+                                        <img class="img-fluid" src="img/product-5.png" alt="slider product image" />
                                     </div>
                                 </div>
                             </div>
@@ -125,7 +126,7 @@
                                 <h4>Quantity</h4>
                                 <div class="quantity_wrapper d-flex align-items-center ">
                                     <span class="decrease"><i class="fa-solid fa-minus"></i></span>
-                                    <input type="number" class="cart_value" min="1" value="1">
+                                    <input type="number" class="cart_value" min="1" value="1" id="f_cart5">
                                     <span class="increase"><i class="fa-solid fa-plus"></i></span>
                                 </div>
                             </div>
@@ -191,7 +192,7 @@
                         <input type="number" id="phone" placeholder="Your number">
                     </div>
                     <div class="single_input">
-                        <input type="date" id="date" required>
+                        <input type="date" id="date"  required>
                         <input type="time" id="time" required>
                     </div>
                     <select>
@@ -224,7 +225,7 @@
                     <form class="newsletter_form">
                         <div class="newsletter_input d-flex align-items-center">
                             <span><i class="fa-solid fa-envelope"></i></span>
-                            <input type="email" placeholder="Enter your email" required>
+                            <input type="email" placeholder="Enter your email" id="n_user_email" required>
                         </div>
                         <button type="submit"><span>SUBSCRIBE</span></button>
                     </form>
@@ -257,14 +258,14 @@
                     <a href="#">Home page 3</a>
                 </div>
                 <a href="#" class="menu_item">Blog</a>
-                <a href="#" class="accordion-title menu_item">Shop</a>
+                <a href="shop.html" class="accordion-title menu_item">Shop</a>
                 <div class="accordion-content">
                     <a href="#">Left Side Bar</a>
                     <a href="#">Right Side Bar</a>
                 </div>
                 <a href="#" class="accordion-title menu_item">Pages</a>
                 <div class="accordion-content">
-                    <a href="#">Product Page</a>
+                    <a href="product.html">Product Page</a>
                     <a href="#">404 Error Page</a>
                     <a href="#">FAQs</a>
                 </div>
@@ -309,7 +310,7 @@
                             <span>$20</span>
                             <div class="add_cart d-flex align-items-center">
                                 <span class="decrease"><i class="fa-solid fa-minus"></i></span>
-                                <input type="number" class="cart_value" min="1" value="1">
+                                <input type="number" class="cart_value" min="1" value="1" id="f_cart3">
                                 <span class="increase"><i class="fa-solid fa-plus"></i></span>
                             </div>
                         </div>
@@ -327,7 +328,7 @@
                             <span>$40</span>
                             <div class="add_cart d-flex align-items-center">
                                 <span class="decrease"><i class="fa-solid fa-minus"></i></span>
-                                <input type="number" class="cart_value" min="1" value="1">
+                                <input type="number" class="cart_value" min="1" value="1" id="f_cart2">
                                 <span class="increase"><i class="fa-solid fa-plus"></i></span>
                             </div>
                         </div>
@@ -345,7 +346,7 @@
                             <span>$50</span>
                             <div class="add_cart d-flex align-items-center">
                                 <span class="decrease"><i class="fa-solid fa-minus"></i></span>
-                                <input type="number" class="cart_value" min="1" value="1">
+                                <input type="number" class="cart_value" min="1" value="1" id="f_cart">
                                 <span class="increase"><i class="fa-solid fa-plus"></i></span>
                             </div>
                         </div>
@@ -724,7 +725,7 @@
                                 </li>
                                 <li class="list-unstyled"><a href="#">Blog</a></li>
                                 <li class="list-unstyled">
-                                    <a href="#">Shop <i class="fa-solid fa-angle-down ms-2"></i></a>
+                                    <a href="shop.html">Shop <i class="fa-solid fa-angle-down ms-2"></i></a>
                                     <div class="dropdown_menu mega_menu2">
                                         <div class="row">
                                             <div class="col-3">
@@ -830,7 +831,7 @@
                                     <a href="#">Pages<i class="fa-solid fa-angle-down ms-2"></i></a>
                                     <div class="dropdown_menu">
                                         <ul class="ps-0 mb-0">
-                                            <li class="list-unstyled"><a href="#">Product page</a></li>
+                                            <li class="list-unstyled"><a href="product.html">Product page</a></li>
                                             <li class="list-unstyled"><a href="#">404 Error Page</a></li>
                                             <li class="list-unstyled"><a href="#">FAQs</a></li>
                                         </ul>
@@ -969,7 +970,7 @@
     <div class="hero_bottom_section d-none d-md-block ">
         <div class="container-fluid container-xl">
             <div class="hero_bottm_wrapper">
-                <div class="single_item ">
+                <div class="single_item" data-aos="fade-up" data-aos-duration="1000">
                     <h4 class="text-center">Beautiful Pet Necklace</h4>
                     <p class="mb-0 text-center ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quis dignis
                         simos quam.</p>
@@ -977,7 +978,8 @@
                         <a href="#">SHOP NOW</a>
                     </div>
                 </div>
-                <div class="single_item d-flex align-items-start justify-content-center">
+                <div class="single_item d-flex align-items-start justify-content-center" data-aos="fade-up"
+                    data-aos-duration="1000">
                     <h4>90% Soft Pet Bed</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quis dignis simos quam.</p>
                     <div class="item_button">
@@ -988,7 +990,7 @@
         </div>
     </div>
     <!--category section-->
-    <section class="popular_categories">
+    <section class="popular_categories" data-aos="fade-up" data-aos-duration="1000">
         <div class="container-fluid container-xl">
             <div class="category_wrapper">
                 <div class="section_title d-flex justify-content-between ">
@@ -1173,7 +1175,7 @@
             </div>
         </div>
     </section> -->
-    <section class="top_sell_product">
+    <section class="top_sell_product" data-aos="fade-up" data-aos-duration="1000">
         <div class="container-fluid container-xl">
             <div class="top_sell_wrapper">
                 <div class="section_title d-flex justify-content-between">
@@ -1529,7 +1531,8 @@
             </div>
         </div>
     </section>
-    <section class="blog_section">
+    <section class="blog_section"  data-aos="fade-up"
+    data-aos-duration="1000">
         <div class="container-fluid container-xl">
             <div class="blog_wrapper">
                 <div class="section_title">
@@ -1762,7 +1765,8 @@
             </div>
         </div>
     </section>
-    <div class="brand_section">
+    <div class="brand_section"  data-aos="fade-up"
+    data-aos-duration="1000">
         <div class="container-fluid container-xl">
             <div class="swiper mySwiper4">
                 <div class="swiper-wrapper">
@@ -1802,7 +1806,8 @@
             </div>
         </div>
     </div>
-    <footer>
+    <footer  data-aos="fade-up"
+    data-aos-duration="1000">
         <div class="container-fluid container-xl">
             <div class="footer_wrapper">
                 <div class="row">
@@ -1863,11 +1868,11 @@
                             <h3>Newsletter</h3>
                             <div class="newsletter_body">
                                 <p>Subscribe our Newsletter to get the latest news and insights</p>
-                                <from class="footer_newsletter">
+                                <form class="footer_newsletter">
                                     <input type="email" name="email" id="user_email" placeholder="Your Email Address"
                                         required>
                                     <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
-                                </from>
+                                </form>
                                 <p>By subscribing, you accept the Privacy Policy</p>
                                 <div class="opening_hrs d-flex align-items-center gap-2">
                                     <div class="opening_left"><i class="fa-solid fa-calendar-days"></i></div>
@@ -1894,6 +1899,7 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery-backToTop.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/script.js"></script>
 </body>
 

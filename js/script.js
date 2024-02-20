@@ -53,6 +53,22 @@ select_option.forEach(option => {
 });
 
 
+//sticky header script
+$(document).ready(() => {
+  const heroSectionBottom = $(".hero_section").offset().top + $(".hero_section").outerHeight();
+  $(window).on("scroll", () => {
+    const scrollPosition = $(window).scrollTop();
+
+    if (scrollPosition >= (heroSectionBottom-300)) {
+      $("header").addClass("sticky_animation");
+    } else {
+      $("header").removeClass("sticky_animation");
+    }
+  });
+});
+//aos on scroll animation intialize
+AOS.init();
+
 //add to cart count
 const increase_button = document.querySelectorAll(".increase");
 const decrease_button = document.querySelectorAll(".decrease");
@@ -181,6 +197,50 @@ quick_view_open.forEach(btn => {
 quick_view_btn.addEventListener("click" , () => {
   quick_view_area.style.display = "none"
 })
+
+  // scroll to top button
+  var $button = $.backToTop({
+
+    // background color
+    backgroundColor: '#ED6436',
+
+    // text color
+    color: '#FFFFFF',
+
+    // container element
+    container: this._body, 
+
+    // 'nonn', 'spin', 'fade', 'zoom', or 'spin-inverse'
+    effect: 'spin',
+
+    // enable the back to top button
+    enabled: true, 
+
+    // width/height of the back to top button
+    height: 70,  
+    width: 70,
+
+    // icon
+    icon: 'fas fa-chevron-up',
+
+    // margins 
+    marginX: 20,
+    marginY: 20,  
+
+    // bottom/top left/right
+    position: 'bottom right',           
+
+    // trigger position
+    pxToTrigger: 600,
+
+    // or 'fawesome'
+    theme: 'default',
+
+    // z-index
+    zIndex: 999
+    
+});
+
 
 //script for adding gallary
 var swiper = new Swiper(".mySwiper6", {

@@ -84,6 +84,52 @@ quick_view_btn.addEventListener("click" , () => {
   quick_view_area.style.display = "none"
 })
 
+
+ // scroll to top button
+ var $button = $.backToTop({
+
+  // background color
+  backgroundColor: '#ED6436',
+
+  // text color
+  color: '#FFFFFF',
+
+  // container element
+  container: this._body, 
+
+  // 'nonn', 'spin', 'fade', 'zoom', or 'spin-inverse'
+  effect: 'spin',
+
+  // enable the back to top button
+  enabled: true, 
+
+  // width/height of the back to top button
+  height: 70,  
+  width: 70,
+
+  // icon
+  icon: 'fas fa-chevron-up',
+
+  // margins 
+  marginX: 20,
+  marginY: 20,  
+
+  // bottom/top left/right
+  position: 'bottom right',           
+
+  // trigger position
+  pxToTrigger: 600,
+
+  // or 'fawesome'
+  theme: 'default',
+
+  // z-index
+  zIndex: 999
+  
+});
+
+
+
 //script for adding gallary
 var swiper = new Swiper(".mySwiper6", {
   spaceBetween: 1,

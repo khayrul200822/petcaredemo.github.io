@@ -43,6 +43,25 @@ a {
 header {
     background-color: var(--color-two);
     color: var(--color-three);
+    z-index: 999;
+}
+header.sticky_animation {
+    position: sticky;
+    top: 0;
+    transform: translate(0px, 20px);
+    animation: sticky_anim 1s alternate forwards ease-in-out;
+}
+
+@keyframes sticky_anim {
+    0% {
+        transform: translate(0px, -110px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
 }
 
 .top-haeder {
