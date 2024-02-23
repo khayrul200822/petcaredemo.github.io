@@ -1235,7 +1235,7 @@ form.search_items {
 .shop_wrapper .archive-header {
     margin-top: 20px;
     margin-bottom: 50px;
-    background: linear-gradient(90deg, var(--color-two), transparent), url("/image/shop_bg2.jpg");
+    background: linear-gradient(90deg, var(--color-two), transparent);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1287,7 +1287,7 @@ ul.tag_list li a span svg {
 ul.tag_list li a:hover {
     transform: translate(0px, -5px);
     transition: .6s;
-    color: #333;
+    color: var(--color-one);
 }
 
 .shop_wrapper .archive-header ul.breadcrumb_div {
@@ -1329,6 +1329,7 @@ aside .filter_price .price_inputs {
 aside .filter_price .price_inputs .field {
     display: flex;
     align-items: center;
+    height: 35px;
 }
 
 aside .filter_price .price_inputs .field input {
@@ -1337,9 +1338,10 @@ aside .filter_price .price_inputs .field input {
     padding: 5px;
     outline: none;
     appearance: none;
-    border-radius: 3px;
-    border: 1px solid #c3c3c3;
+    border: 1px solid transparent;
     text-align: center;
+    border: 1px solid var(--color-two);
+    height: 100%;
 }
 
 aside .filter_price .price_inputs .field input:focus {
@@ -1351,8 +1353,10 @@ aside .filter_price .price_inputs .field span {
     width: 40px;
     display: grid;
     place-items: center;
-    background: #c3c3c3;
-    height: 34px;
+    background: var(--color-two);
+    height: 35px;
+    border: 1px solid var(--color-two);
+    color: var(--color-three);
 }
 
 aside .filter_price .price_inputs .field input[type="number"]::-webkit-outer-spin-button,
@@ -1422,7 +1426,7 @@ aside .filter_price .price_ragne .range_div input::-moz-range-thumb {
 
 .product_area aside .aside_wrapper {
     padding: 30px 15px;
-    background: var(--smoke-color);
+    background: #f4f5f7;
     position: relative;
     border-radius: 10px;
 }
@@ -1449,7 +1453,9 @@ aside .filter_price .price_ragne .range_div input::-moz-range-thumb {
 
 .product_area aside button:hover {
     transition: .6s;
-    color: #333;
+    color: var(--color-three);
+    border: 1px solid var(--color-one);
+    background: var(--color-one);
 }
 
 .product_area aside .category .single_category {
@@ -1490,9 +1496,10 @@ aside .filter_price .price_ragne .range_div input::-moz-range-thumb {
     padding: 5px 10px;
     background-color: transparent;
     font-size: 14px;
-    border: 1px solid #777;
+    border: 1px solid var(--color-two);
     border-radius: 50px;
-    color: var(--color-two);
+    color: var(
+    --color-two);
     transition: .6s;
 }
 
@@ -1530,6 +1537,7 @@ aside .filter_price .price_ragne .range_div input::-moz-range-thumb {
 }
 .single_product .product_img {
     width: 30%;
+    background: #f4f5f7;
 }
 
 .single_product .product_info {
@@ -1559,7 +1567,7 @@ aside .filter_price .price_ragne .range_div input::-moz-range-thumb {
 .single_product .product_info .product_price {
     color: #333;
     font-weight: 600;
-    margin: 5px 0px;
+    margin: 0px;
     margin-bottom: 0;
 }
 
@@ -1581,7 +1589,7 @@ aside .filter_price .price_ragne .range_div input::-moz-range-thumb {
 
 .side_bar_close:hover {
     color: var(--color-three);
-    background-color: #333;
+    background-color: var(--color-one);
     transition: .6s;
 }
 
@@ -1653,11 +1661,16 @@ aside .filter_price .price_ragne .range_div input::-moz-range-thumb {
     gap: 5px;
     font-size: 15px;
 }
-
+.p-header-right .pageShow_select .pageShow_item_popup ul li svg, .short_list ul li svg {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translate(0px, -50%);
+}
 .p-header-right .pageShow_select .pageShow_select_btn,
 .short_by_btn {
     padding: 5px 10px;
-    background: var(--smoke-color);
+    background: #f4f5f7;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -1717,9 +1730,8 @@ aside .filter_price .price_ragne .range_div input::-moz-range-thumb {
 
 .p-header-right .pageShow_select .pageShow_item_popup ul,
 .short_list ul {
-    background: var(--smoke-color);
+    background: #f4f5f7;
     width: 100%;
-    padding: 10px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
 }
