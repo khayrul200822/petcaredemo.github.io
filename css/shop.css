@@ -1234,7 +1234,6 @@ form.search_items {
 
 .shop_wrapper .archive-header {
     margin-top: 20px;
-    margin-bottom: 50px;
     background: linear-gradient(90deg, var(--color-two), transparent);
     background-position: center center;
     background-repeat: no-repeat;
@@ -1242,7 +1241,9 @@ form.search_items {
     border-radius: 30px;
     padding: 30px 60px;
 }
-
+.shop_wrapper .product_area {
+    padding: 50px 0px;
+}
 .shop_wrapper .archive-header h2 {
     font-size: 40px;
     color: white;
