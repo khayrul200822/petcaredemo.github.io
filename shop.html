@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/jquery-backToTop.min.css">
     <link rel="stylesheet" href="css/jquery.pajinatify.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css" />
 </head>
 
 <body>
@@ -768,12 +768,256 @@
             </div>
         </div>
     </header>
+    <!--shop main body-->
+    <section id="shop_section">
+        <div class="container-fluid container-xl">
+            <div class="shop_wrapper">
+                <div class="archive-header">
+                    <h2>Shop</h2>
+                    <div class="crumb_section d-flex justify-content-between align-items-center ">
+                        <ul class="breadcrumb_div ps-0">
+                            <li class="list-unstyled">
+                                <a href="index.html"><i class="fa-solid fa-house me-1"></i> Home</a>
+                            </li>
+                            <li class="list-unstyled">
+                                <a href="#">Shop</a>
+                            </li>
+                            <li class="list-unstyled">
+                                <a href="#">Category-01</a>
+                            </li>
+                        </ul>
+                        <div class="food_searchBar">
+                            <form>
+                                <span class="search_icon  search_icon2 ">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                </span>
+                                <div class="search_bar_container">
+                                    <input type="search" id="food_search" placeholder="Search your Dishes">
+                                    <button type="submit">Search</button>
+                                </div>
 
-
-
-
-
-
+                            </form>
+                        </div>
+                    </div>
+                    <ul class="tag_list d-flex gap-2 ps-0">
+                        <li class="list-unstyled"><a href="#"><span><i class="fa-solid fa-x"></i></span> Pet Accessories</a></li>
+                        <li class="list-unstyled"><a href="#"><span><i class="fa-solid fa-x"></i></span> Pet Medicine</a></li>
+                        <li class="list-unstyled"><a href="#"><span><i class="fa-solid fa-x"></i></span>
+                            Pet Toyes</a></li>
+                        <li class="list-unstyled"><a href="#"><span><i class="fa-solid fa-x"></i></span>
+                                Pet Feshion</a></li>
+                        <li class="list-unstyled"><a href="#"><span><i class="fa-solid fa-x"></i></span>
+                                Pet Food</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="product_area d-flex justify-content-between">
+                    <aside>
+                        <div class="aside_wrapper">
+                            <span class="side_bar_close"><i class="fa-solid fa-minus"></i></span>
+                            <div class="aside_title d-flex justify-content-between align-items-center ">
+                                <h2>Filter</h2>
+                                <button type="reset">Clear</button>
+                            </div>
+                            <div class="category mb-5">
+                                <h2 class="div_title">Category</h2>
+                                <div class="category_wrapper">
+                                    <div class="single_category">
+                                        <input type="checkbox" id="category1">
+                                        <label for="category1">Pet Accessories</label>
+                                    </div>
+                                    <div class="single_category">
+                                        <input type="checkbox" id="category2">
+                                        <label for="category2">Pet Medicine</label>
+                                    </div>
+                                    <div class="single_category">
+                                        <input type="checkbox" id="category3">
+                                        <label for="category3">Pet Toyes</label>
+                                    </div>
+                                    <div class="single_category">
+                                        <input type="checkbox" id="category4">
+                                        <label for="category4">Pet Feshion</label>
+                                    </div>
+                                    <div class="single_category">
+                                        <input type="checkbox" id="category5">
+                                        <label for="category5">Pet Food</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter_price mb-5">
+                                <div class="price_head d-flex align-items-center justify-content-between ">
+                                    <h2 class="div_title">Price</h2>
+                                    <button>Filter</button>
+                                </div>
+                                <div class="price_inputs d-flex justify-content-between ">
+                                    <div class="field">
+                                        <span>$</span>
+                                        <input type="number" name="number" value="0" min="0" max="1000"
+                                            class="minNumber">
+                                    </div>
+                                    <div class="separator">
+                                        -
+                                    </div>
+                                    <div class="field">
+                                        <span>$</span>
+                                        <input type="number" name="number" value="1000" min="0" max="1000"
+                                            class="maxNumber">
+                                    </div>
+                                </div>
+                                <div class="price_ragne">
+                                    <div class="price_progress">
+                                    </div>
+                                    <div class="range_div">
+                                        <input type="range" name="range" min="0" max="1000" value="0"
+                                            class="min_price_range">
+                                        <input type="range" name="range" min="0" max="1000" value="10000"
+                                            class="max_price_range">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popular_product mb-5">
+                                <h2 class="div_title">Top Products</h2>
+                                <div class="popular_wrapper">
+                                    <div class="single_product d-flex align-items-center mb-3">
+                                        <div class="product_img">
+                                            <img class="img-fluid " src="img/product-2.png" alt="product Image">
+                                        </div>
+                                        <div class="product_info">
+                                            <div class="product_rating d-flex gap-1 ">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <h3 class="product_title"><a href="#">Cat Harness Belt</a></h3>
+                                            <p class="product_price">$80.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="single_product d-flex align-items-center mb-3">
+                                        <div class="product_img">
+                                            <img class="img-fluid " src="img/product-1b.png" alt="product Image">
+                                        </div>
+                                        <div class="product_info">
+                                            <div class="product_rating d-flex gap-1 ">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star-half-stroke"></i>
+                                            </div>
+                                            <h3 class="product_title"><a href="#">Pet Carrier</a></h3>
+                                            <p class="product_price">$55.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="single_product d-flex align-items-center mb-3">
+                                        <div class="product_img">
+                                            <img class="img-fluid " src="img/product-3.png" alt="product Image">
+                                        </div>
+                                        <div class="product_info">
+                                            <div class="product_rating d-flex gap-1 ">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <h3 class="product_title"><a href="#">Pet Nail Trimmer</a></h3>
+                                            <p class="product_price">$55.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tags">
+                                <h2 class="div_title">Tags</h2>
+                                <div class="tags_wrapper">
+                                    <a href="#">Nail Trimmer</a>
+                                    <a href="#">Pet Carrier</a>
+                                    <a href="#">Collars</a>
+                                    <a href="#">Pet Bed</a>
+                                    <a href="#">Harness Belt</a>
+                                    <a href="#">Checked cotton</a>
+                                    <a href="#">Ear wipes</a>
+                                    <a href="#">Paw Cleaner</a>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                    <div class="product_container">
+                        <div class="product_sub_container">
+                            <div class="product_container_header d-flex align-items-center  justify-content-between">
+                                <div class="p_header_left d-flex align-items-center ">
+                                    <span class="sidebar_show"><i class="fa-solid fa-ellipsis"></i></span>
+                                    <p class="mb-0">Showing <span class="show_item">18</span> of <span
+                                            class="total_item">36</span> result</p>
+                                    <div class="product_view d-flex ">
+                                        <div class="single_view list_view">
+                                            <i class="fa-solid fa-grip-lines"></i>
+                                        </div>
+                                        <div class="single_view grid2_view">
+                                            <i class="fa-solid fa-grip-lines-vertical"></i>
+                                        </div>
+                                        <div class="single_view grid3_view">
+                                            <i class="fa-solid fa-table-cells"></i>
+                                        </div>
+                                        <div class="single_view grid4_view d-none d-lg-grid ">
+                                            <i class="fa-solid fa-grip"></i>
+                                        </div>
+                                        <div class="single_view grid5_view d-none d-xl-grid ">
+                                            <i class="fa-solid fa-border-none"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-header-right d-flex align-items-center ">
+                                    <div class="pageShow_select d-flex align-items-center ">
+                                        <div class="pageShow_select_btn">
+                                            <p class="mb-0"><i class="fa-solid fa-grip-vertical"></i>Show:
+                                                <span class="show_p_item">50</span>
+                                                <i class="fa-solid fa-angle-down"></i>
+                                            </p>
+                                        </div>
+                                        <div class="pageShow_item_popup">
+                                            <ul class="ps-0">
+                                                <li class="list-unstyled">30</li>
+                                                <li class="list-unstyled">
+                                                    <i class="fa-solid fa-check"></i>
+                                                    50
+                                                </li>
+                                                <li class="list-unstyled">80</li>
+                                                <li class="list-unstyled">100</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="short_by">
+                                        <div class="short_by_btn">
+                                            <p class="mb-0">
+                                                <i class="fa-solid fa-filter"></i>
+                                                Sort by:
+                                                <span class="sort_item">Featured</span>
+                                                <i class="fa-solid fa-angle-down"></i>
+                                            </p>
+                                        </div>
+                                        <div class="short_list">
+                                            <ul class="ps-0">
+                                                <li class="list-unstyled">Price</li>
+                                                <li class="list-unstyled">Popular</li>
+                                                <li class="list-unstyled">
+                                                    <i class="fa-solid fa-check"></i> Featured
+                                                </li>
+                                                <li class="list-unstyled">Popular</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--shop main body end-->
 
 
     <footer>

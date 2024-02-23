@@ -14,9 +14,11 @@ const newsletter_popup = document.querySelector(".newsletter_popup")
 
 setTimeout(() => {
   newsletter_popup.style.transform = "scale(1)";
+  document.body.style.overflow = "hidden"
 }, 5000)
 newsletter_poup_close.addEventListener("click", () => {
   newsletter_popup.style.transform = "scale(0)";
+  document.body.style.overflow = "auto"
 })
 //get elements
 const optionMenu = document.querySelectorAll(".currency_option li");
@@ -51,7 +53,7 @@ select_option.forEach(option => {
     });
   });
 });
-
+ 
 
 //sticky header script
 $(document).ready(() => {
@@ -61,8 +63,10 @@ $(document).ready(() => {
 
     if (scrollPosition >= (heroSectionBottom-300)) {
       $("header").addClass("sticky_animation");
+      $(".top-haeder").addClass("hide_top_header")
     } else {
       $("header").removeClass("sticky_animation");
+      $(".top-haeder").removeClass("hide_top_header");
     }
   });
 });
@@ -99,46 +103,46 @@ $(".accordion-title").click(function () {
   $(this).next().slideToggle(300);
 });
 
-//offer countdown script
-// let dayValue = document.querySelector(".days");
-// let hrsValue = document.querySelector(".hrs");
-// let minValue = document.querySelector(".min");
-// let secValue = document.querySelector(".sec");
+// offer countdown script
+let dayValue = document.querySelector(".days");
+let hrsValue = document.querySelector(".hrs");
+let minValue = document.querySelector(".min");
+let secValue = document.querySelector(".sec");
 
-// // Set the date you're counting down to (replace with your desired date)
-// const countdownDate = new Date("February 28, 2024 00:00:00").getTime();
+// Set the date you're counting down to (replace with your desired date)
+const countdownDate = new Date("February 28, 2024 00:00:00").getTime();
 
-// // Update the countdown every 1 second
-// const countdownInterval = setInterval(function() {
-//   // Get the current date and time
-//   const now = new Date().getTime();
+// Update the countdown every 1 second
+const countdownInterval = setInterval(function() {
+  // Get the current date and time
+  const now = new Date().getTime();
 
-//   // Calculate the remaining time
-//   const timeRemaining = countdownDate - now;
+  // Calculate the remaining time
+  const timeRemaining = countdownDate - now;
 
-//   // Calculate days, hours, minutes, and seconds
-//   const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-//   const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//   const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-//   const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+  // Calculate days, hours, minutes, and seconds
+  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-//   // Update the HTML elements with the calculated values
-//   dayValue.textContent = formatTime(days);
-//   hrsValue.textContent = formatTime(hours);
-//   minValue.textContent = formatTime(minutes);
-//   secValue.textContent = formatTime(seconds);
+  // Update the HTML elements with the calculated values
+  dayValue.textContent = formatTime(days);
+  hrsValue.textContent = formatTime(hours);
+  minValue.textContent = formatTime(minutes);
+  secValue.textContent = formatTime(seconds);
 
-//   // If the countdown is over, display a message or perform any action
-//   if (timeRemaining < 0) {
-//     clearInterval(countdownInterval);
-//     // You can add a message or perform an action when the countdown is over
-//   }
-// }, 1000);
+  // If the countdown is over, display a message or perform any action
+  if (timeRemaining < 0) {
+    clearInterval(countdownInterval);
+    // You can add a message or perform an action when the countdown is over
+  }
+}, 1000);
 
-// // Function to format time values with leading zeros
-// function formatTime(value) {
-//   return value < 10 ? "0" + value : value;
-// }
+// Function to format time values with leading zeros
+function formatTime(value) {
+  return value < 10 ? "0" + value : value;
+}
 
 
 // appoinment popup
@@ -191,11 +195,13 @@ const quick_view_open = document.querySelectorAll(".quick_view_btn");
 quick_view_open.forEach(btn => {
   btn.addEventListener("click", () => {
     quick_view_area.style.display = "flex"
+    document.body.style.overflow = "hidden";
   })
 })
 // const quick_view_btn = document.querySelector(".close_quick_view")
 quick_view_btn.addEventListener("click" , () => {
   quick_view_area.style.display = "none"
+  document.body.style.overflow = "auto";
 })
 
   // scroll to top button
