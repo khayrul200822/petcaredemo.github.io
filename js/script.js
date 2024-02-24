@@ -153,11 +153,13 @@ const appo_popup_open = document.querySelectorAll(".slider_button button")
 appo_popup_open.forEach(btn => {
   btn.addEventListener("click", () => {
     appo_popup.style.display = "flex"
+    document.body.style.overflow = "hidden"
   })
 })
 
 appo_popup_close.addEventListener("click", () => {
   appo_popup.style.display = "none"
+  document.body.style.overflow = "auto"
 })
 
 const hover_product = document.querySelectorAll(".ts_single_product")
