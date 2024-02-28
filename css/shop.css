@@ -1868,12 +1868,14 @@ aside .aside_wrapper>button:hover>svg {
     outline: none;
     border: 1px solid transparent;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background: var(--color-one);
     color: var(--color-three);
     transition: .6s;
     margin-right: 10px;
+    display: grid;
+    place-items: center;
 }
 
 .p_header_left>button:hover {
