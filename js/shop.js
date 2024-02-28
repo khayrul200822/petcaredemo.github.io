@@ -29,16 +29,16 @@ select_option.forEach(option => {
 const optionMenu = document.querySelectorAll(".currency_option li");
 const option_value = document.querySelector(".value_area");
 const language_option = document.querySelectorAll(".ln_option li")
-const language_value =document.querySelector(".ln_value");
+const language_value = document.querySelector(".ln_value");
 optionMenu.forEach(item => {
-    item.addEventListener("click" , () => {
-        option_value.textContent = item.textContent;
-    })
+  item.addEventListener("click", () => {
+    option_value.textContent = item.textContent;
+  })
 })
 language_option.forEach(ln_item => {
-    ln_item.addEventListener("click" , () => {
-        language_value.textContent = ln_item.textContent;
-    })
+  ln_item.addEventListener("click", () => {
+    language_value.textContent = ln_item.textContent;
+  })
 })
 //add to cart count
 const increase_button = document.querySelectorAll(".increase");
@@ -63,23 +63,35 @@ decrease_button.forEach((btn, index) => {
 
 // shop script start*****
 
-//for side bar handling
-const sideBar_close = document.querySelector(".side_bar_close");
-const side_bar = document.querySelector("aside");
-const product_container = document.querySelector(".product_container");
-const sideBar_show = document.querySelector(".sidebar_show");
+// //for side bar handling
+// const sideBar_close = document.querySelector(".side_bar_close");
+// const side_bar = document.querySelector("aside");
+// const product_container = document.querySelector(".product_container");
+// const sideBar_show = document.querySelector(".sidebar_show");
 
-sideBar_close.addEventListener("click", () => {
-  side_bar.style.display = "none";
-  product_container.style.width = "100%";
-  sideBar_show.style.display = "grid";
+// sideBar_close.addEventListener("click", () => {
+//   side_bar.style.display = "none";
+//   product_container.style.width = "100%";
+//   sideBar_show.style.display = "grid";
 
-})
-sideBar_show.addEventListener("click", () => {
-  side_bar.style.display = "block";
-  product_container.style.width = "calc(100% - 300px)";
-  sideBar_show.style.display = "none"
-})
+// })
+// sideBar_show.addEventListener("click", () => {
+//   side_bar.style.display = "block";
+//   product_container.style.width = "calc(100% - 300px)";
+//   sideBar_show.style.display = "none"
+// })
+
+//script for pagination
+//script for pagination
+const current_page_no = document.querySelector(".page_no");
+$('.pagination').pajinatify({
+  dir: 'rtl',
+  onChange: function (currentPage) {
+    current_page_no.textContent = currentPage;
+  },
+});
+
+
 //for sortby popup and filtaring popup
 const dropdown = document.querySelector(".pageShow_item_popup")
 const dropdown2 = document.querySelector(".short_list")
@@ -175,6 +187,81 @@ value_handler(item_value, item_value_field)
 value_handler(sort_value, sort_value_field)
 
 
+//cout down for offer
+let dayValue = document.querySelectorAll(".day_value");
+let hrsValue = document.querySelectorAll(".hrs_value");
+let minValue = document.querySelectorAll(".min_value");
+let secValue = document.querySelectorAll(".sec_value");
+
+// Set the date you're counting down to (replace with your desired date)
+const countdownDate = new Date("march 10, 2024 00:00:00").getTime();
+
+// Update the countdown every 1 second
+const countdownInterval = setInterval(function() {
+  // Get the current date and time
+  const now = new Date().getTime();
+
+  // Calculate the remaining time
+  const timeRemaining = countdownDate - now;
+
+  // Calculate days, hours, minutes, and seconds
+  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+  // Update the HTML elements with the calculated values
+  dayValue.forEach( value => {
+    value.textContent = formatTime(days);
+  }) 
+  hrsValue.forEach( value => {
+    value.textContent = formatTime(hours);
+  }) 
+  minValue.forEach( value => {
+    value.textContent = formatTime(minutes);
+  }) 
+  secValue.forEach( value => {
+    value.textContent = formatTime(seconds);
+  }) 
+  
+  // If the countdown is over, display a message or perform any action
+  if (timeRemaining < 0) {
+    clearInterval(countdownInterval);
+    // You can add a message or perform an action when the countdown is over
+  }
+}, 1000);
+
+// Function to format time values with leading zeros
+function formatTime(value) {
+  return value < 10 ? "0" + value : value;
+}
+//expand description handler
+
+const expand_buttons = document.querySelectorAll(".expand_btn");
+expand_buttons.forEach(ex_btn => {
+
+  let is_clicked = true;
+  ex_btn.addEventListener("click", () => {
+    const expand_text = ex_btn.closest(".product_description").querySelector("p");
+    const expand_overlay = ex_btn.closest(".product_description").querySelector(".desc_expanded");
+   
+    if (is_clicked) {
+      expand_text.style.height = "auto";
+      expand_overlay.style.display = "none"
+      ex_btn.innerHTML = "<i class='fa-solid fa-chevron-up'></i>"
+    } else {
+      expand_text.style.height = "80px";
+      expand_overlay.style.display = "block"
+      ex_btn.innerHTML = "<i class='fa-solid fa-chevron-down'></i>"
+    }
+
+    is_clicked = !is_clicked;
+
+  });
+
+})
+
+
 //shop script end******
 
 
@@ -189,6 +276,25 @@ $(".accordion-title").click(function () {
 });
 
 
+//sticky header script
+$(document).ready(() => {
+  const heroSectionBottom = $(".product_container_body").offset().top + $(".product_container_body").outerHeight();
+  $(window).on("scroll", () => {
+    const scrollPosition = $(window).scrollTop();
+
+    if (scrollPosition >= (heroSectionBottom - 1500)) {
+      $("header").addClass("sticky_animation");
+      $(".top-haeder").addClass("hide_top_header")
+    } else {
+      $("header").removeClass("sticky_animation");
+      $(".top-haeder").removeClass("hide_top_header");
+    }
+  });
+});
+
+
+
+
 const quick_view_area = document.querySelector(".quick_view_popup")
 const quick_view_btn = document.querySelector(".close_quick_view")
 const quick_view_open = document.querySelectorAll(".quick_view_btn");
@@ -198,13 +304,13 @@ quick_view_open.forEach(btn => {
   })
 })
 // const quick_view_btn = document.querySelector(".close_quick_view")
-quick_view_btn.addEventListener("click" , () => {
+quick_view_btn.addEventListener("click", () => {
   quick_view_area.style.display = "none"
 })
 
 
- // scroll to top button
- var $button = $.backToTop({
+// scroll to top button
+var $button = $.backToTop({
 
   // background color
   backgroundColor: '#ED6436',
@@ -213,16 +319,16 @@ quick_view_btn.addEventListener("click" , () => {
   color: '#FFFFFF',
 
   // container element
-  container: this._body, 
+  container: this._body,
 
   // 'nonn', 'spin', 'fade', 'zoom', or 'spin-inverse'
   effect: 'spin',
 
   // enable the back to top button
-  enabled: true, 
+  enabled: true,
 
   // width/height of the back to top button
-  height: 70,  
+  height: 70,
   width: 70,
 
   // icon
@@ -230,10 +336,10 @@ quick_view_btn.addEventListener("click" , () => {
 
   // margins 
   marginX: 20,
-  marginY: 20,  
+  marginY: 20,
 
   // bottom/top left/right
-  position: 'bottom right',           
+  position: 'bottom right',
 
   // trigger position
   pxToTrigger: 600,
@@ -243,7 +349,7 @@ quick_view_btn.addEventListener("click" , () => {
 
   // z-index
   zIndex: 999
-  
+
 });
 
 

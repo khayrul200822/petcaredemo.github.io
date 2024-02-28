@@ -1539,6 +1539,7 @@
      background: var(--color-one);
      color: white;
      display: inline-block;
+     transition: .6s;
  }
 
  .hero_bottm_wrapper .single_item:last-child h4 {
@@ -2697,22 +2698,6 @@
 section.product_section .product_container .single_product:first-child .content>h3 {
     font-size: 25px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

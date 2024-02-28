@@ -22,6 +22,138 @@
             <img class="img-fluid" src="img/pet_preloader.gif" alt="preloader image" />
         </div>
     </div>
+    <div class="offcanvas offcanvas-start filter_side" tabindex="-1" id="offcanvasExample1"
+        aria-labelledby="offcanvasExampleLabel1">
+        <aside>
+            <div class="aside_wrapper">
+
+                <button type="button" class="btn-close1" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                        class="fa-solid fa-x"></i></button>
+                <div class="aside_title d-flex justify-content-between align-items-center ">
+                    <h2>Filter</h2>
+                    <button type="reset">Clear</button>
+                </div>
+                <div class="category mb-5">
+                    <h2 class="div_title">Category</h2>
+                    <div class="category_wrapper">
+                        <div class="single_category">
+                            <input type="checkbox" id="category1">
+                            <label for="category1">Pet Accessories</label>
+                        </div>
+                        <div class="single_category">
+                            <input type="checkbox" id="category2">
+                            <label for="category2">Pet Medicine</label>
+                        </div>
+                        <div class="single_category">
+                            <input type="checkbox" id="category3">
+                            <label for="category3">Pet Toyes</label>
+                        </div>
+                        <div class="single_category">
+                            <input type="checkbox" id="category4">
+                            <label for="category4">Pet Feshion</label>
+                        </div>
+                        <div class="single_category">
+                            <input type="checkbox" id="category5">
+                            <label for="category5">Pet Food</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter_price mb-5">
+                    <div class="price_head d-flex align-items-center justify-content-between ">
+                        <h2 class="div_title">Price</h2>
+                        <button>Filter</button>
+                    </div>
+                    <div class="price_inputs d-flex justify-content-between ">
+                        <div class="field">
+                            <span>$</span>
+                            <input type="number" name="number" value="0" min="0" max="1000" class="minNumber">
+                        </div>
+                        <div class="separator">
+                            -
+                        </div>
+                        <div class="field">
+                            <span>$</span>
+                            <input type="number" name="number" value="1000" min="0" max="1000" class="maxNumber">
+                        </div>
+                    </div>
+                    <div class="price_ragne">
+                        <div class="price_progress">
+                        </div>
+                        <div class="range_div">
+                            <input type="range" name="range" min="0" max="1000" value="0" class="min_price_range">
+                            <input type="range" name="range" min="0" max="1000" value="10000" class="max_price_range">
+                        </div>
+                    </div>
+                </div>
+                <div class="popular_product mb-5">
+                    <h2 class="div_title">Top Products</h2>
+                    <div class="popular_wrapper">
+                        <div class="single_product d-flex align-items-center mb-3">
+                            <div class="product_img">
+                                <img class="img-fluid " src="img/product-2.png" alt="product Image">
+                            </div>
+                            <div class="product_info">
+                                <div class="product_rating d-flex gap-1 ">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <h3 class="product_title"><a href="#">Cat Harness Belt</a></h3>
+                                <p class="product_price">$80.00</p>
+                            </div>
+                        </div>
+                        <div class="single_product d-flex align-items-center mb-3">
+                            <div class="product_img">
+                                <img class="img-fluid " src="img/product-1b.png" alt="product Image">
+                            </div>
+                            <div class="product_info">
+                                <div class="product_rating d-flex gap-1 ">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                </div>
+                                <h3 class="product_title"><a href="#">Pet Carrier</a></h3>
+                                <p class="product_price">$55.00</p>
+                            </div>
+                        </div>
+                        <div class="single_product d-flex align-items-center mb-3">
+                            <div class="product_img">
+                                <img class="img-fluid " src="img/product-3.png" alt="product Image">
+                            </div>
+                            <div class="product_info">
+                                <div class="product_rating d-flex gap-1 ">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <h3 class="product_title"><a href="#">Pet Nail Trimmer</a></h3>
+                                <p class="product_price">$55.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tags">
+                    <h2 class="div_title">Tags</h2>
+                    <div class="tags_wrapper">
+                        <a href="#">Nail Trimmer</a>
+                        <a href="#">Pet Carrier</a>
+                        <a href="#">Collars</a>
+                        <a href="#">Pet Bed</a>
+                        <a href="#">Harness Belt</a>
+                        <a href="#">Checked cotton</a>
+                        <a href="#">Ear wipes</a>
+                        <a href="#">Paw Cleaner</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
     <!--product quick view-->
     <div class="quick_view_popup">
         <div class="popup_bg"></div>
@@ -770,7 +902,7 @@
     </header>
     <!--shop main body-->
     <section id="shop_section">
-        <div class="container-fluid container-xl">
+        <div class="container-fluid container-xxl">
             <div class="shop_wrapper">
                 <div class="archive-header">
                     <h2>Shop</h2>
@@ -793,18 +925,19 @@
                                     <i class="fa-solid fa-arrow-left"></i>
                                 </span>
                                 <div class="search_bar_container">
-                                    <input type="search" id="food_search" placeholder="Search your Dishes">
+                                    <input type="search" id="food_search" placeholder="Search your Product" required>
                                     <button type="submit">Search</button>
                                 </div>
-
                             </form>
                         </div>
                     </div>
                     <ul class="tag_list d-flex gap-2 ps-0">
-                        <li class="list-unstyled"><a href="#"><span><i class="fa-solid fa-x"></i></span> Pet Accessories</a></li>
-                        <li class="list-unstyled"><a href="#"><span><i class="fa-solid fa-x"></i></span> Pet Medicine</a></li>
+                        <li class="list-unstyled"><a href="#"><span><i class="fa-solid fa-x"></i></span> Pet
+                                Accessories</a></li>
+                        <li class="list-unstyled"><a href="#"><span><i class="fa-solid fa-x"></i></span> Pet
+                                Medicine</a></li>
                         <li class="list-unstyled"><a href="#"><span><i class="fa-solid fa-x"></i></span>
-                            Pet Toyes</a></li>
+                                Pet Toyes</a></li>
                         <li class="list-unstyled"><a href="#"><span><i class="fa-solid fa-x"></i></span>
                                 Pet Feshion</a></li>
                         <li class="list-unstyled"><a href="#"><span><i class="fa-solid fa-x"></i></span>
@@ -812,143 +945,16 @@
                         </li>
                     </ul>
                 </div>
-                <div class="product_area d-flex justify-content-between">
-                    <aside>
-                        <div class="aside_wrapper">
-                            <span class="side_bar_close"><i class="fa-solid fa-minus"></i></span>
-                            <div class="aside_title d-flex justify-content-between align-items-center ">
-                                <h2>Filter</h2>
-                                <button type="reset">Clear</button>
-                            </div>
-                            <div class="category mb-5">
-                                <h2 class="div_title">Category</h2>
-                                <div class="category_wrapper">
-                                    <div class="single_category">
-                                        <input type="checkbox" id="category1">
-                                        <label for="category1">Pet Accessories</label>
-                                    </div>
-                                    <div class="single_category">
-                                        <input type="checkbox" id="category2">
-                                        <label for="category2">Pet Medicine</label>
-                                    </div>
-                                    <div class="single_category">
-                                        <input type="checkbox" id="category3">
-                                        <label for="category3">Pet Toyes</label>
-                                    </div>
-                                    <div class="single_category">
-                                        <input type="checkbox" id="category4">
-                                        <label for="category4">Pet Feshion</label>
-                                    </div>
-                                    <div class="single_category">
-                                        <input type="checkbox" id="category5">
-                                        <label for="category5">Pet Food</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="filter_price mb-5">
-                                <div class="price_head d-flex align-items-center justify-content-between ">
-                                    <h2 class="div_title">Price</h2>
-                                    <button>Filter</button>
-                                </div>
-                                <div class="price_inputs d-flex justify-content-between ">
-                                    <div class="field">
-                                        <span>$</span>
-                                        <input type="number" name="number" value="0" min="0" max="1000"
-                                            class="minNumber">
-                                    </div>
-                                    <div class="separator">
-                                        -
-                                    </div>
-                                    <div class="field">
-                                        <span>$</span>
-                                        <input type="number" name="number" value="1000" min="0" max="1000"
-                                            class="maxNumber">
-                                    </div>
-                                </div>
-                                <div class="price_ragne">
-                                    <div class="price_progress">
-                                    </div>
-                                    <div class="range_div">
-                                        <input type="range" name="range" min="0" max="1000" value="0"
-                                            class="min_price_range">
-                                        <input type="range" name="range" min="0" max="1000" value="10000"
-                                            class="max_price_range">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="popular_product mb-5">
-                                <h2 class="div_title">Top Products</h2>
-                                <div class="popular_wrapper">
-                                    <div class="single_product d-flex align-items-center mb-3">
-                                        <div class="product_img">
-                                            <img class="img-fluid " src="img/product-2.png" alt="product Image">
-                                        </div>
-                                        <div class="product_info">
-                                            <div class="product_rating d-flex gap-1 ">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <h3 class="product_title"><a href="#">Cat Harness Belt</a></h3>
-                                            <p class="product_price">$80.00</p>
-                                        </div>
-                                    </div>
-                                    <div class="single_product d-flex align-items-center mb-3">
-                                        <div class="product_img">
-                                            <img class="img-fluid " src="img/product-1b.png" alt="product Image">
-                                        </div>
-                                        <div class="product_info">
-                                            <div class="product_rating d-flex gap-1 ">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-regular fa-star-half-stroke"></i>
-                                            </div>
-                                            <h3 class="product_title"><a href="#">Pet Carrier</a></h3>
-                                            <p class="product_price">$55.00</p>
-                                        </div>
-                                    </div>
-                                    <div class="single_product d-flex align-items-center mb-3">
-                                        <div class="product_img">
-                                            <img class="img-fluid " src="img/product-3.png" alt="product Image">
-                                        </div>
-                                        <div class="product_info">
-                                            <div class="product_rating d-flex gap-1 ">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <h3 class="product_title"><a href="#">Pet Nail Trimmer</a></h3>
-                                            <p class="product_price">$55.00</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tags">
-                                <h2 class="div_title">Tags</h2>
-                                <div class="tags_wrapper">
-                                    <a href="#">Nail Trimmer</a>
-                                    <a href="#">Pet Carrier</a>
-                                    <a href="#">Collars</a>
-                                    <a href="#">Pet Bed</a>
-                                    <a href="#">Harness Belt</a>
-                                    <a href="#">Checked cotton</a>
-                                    <a href="#">Ear wipes</a>
-                                    <a href="#">Paw Cleaner</a>
-                                </div>
-                            </div>
-                        </div>
-                    </aside>
+                <div class="product_area d-flex flex-column gap-5 justify-content-between">
+                    <!--aide replaced-->
                     <div class="product_container">
                         <div class="product_sub_container">
                             <div class="product_container_header d-flex align-items-center  justify-content-between">
                                 <div class="p_header_left d-flex align-items-center ">
-                                    <span class="sidebar_show"><i class="fa-solid fa-ellipsis"></i></span>
+                                    <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample1"
+                                        aria-controls="offcanvasExample1">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </button>
                                     <p class="mb-0">Showing <span class="show_item">18</span> of <span
                                             class="total_item">36</span> result</p>
                                     <div class="product_view d-flex ">
@@ -1011,6 +1017,771 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="product_container_body">
+                                <div class="shop_single_product d-flex">
+                                    <div class="shop_product_img">
+                                        <img class="img-fluid" src="img/product-1b.png" alt="product image">
+                                        <div class="rating_wrapper d-flex align-items-center">
+                                            <div class="shop_product_rating">
+                                                <span>4.4</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>3</span>
+                                            </div>
+                                        </div>
+                                        <div class="woocommerce_option d-flex align-items-center gap-3">
+                                            <span class="single_woo_option quick_view">
+                                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            </span>
+                                            <span class="single_woo_option wishlist">
+                                                <i class="fa-solid fa-heart"></i>
+                                            </span>
+                                            <span class="single_woo_option compare">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="shop_product_info">
+                                        <h3><a href="#">Cat Harness Belt</a></h3>
+                                        <div class="shop_product_price d-flex align-items-center gap-3">
+                                            <del>$80</del>
+                                            <span>$50</span>
+                                        </div>
+                                        <div class="product_description">
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+                                                tempore
+                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                            <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <div class="desc_expanded"></div>
+                                        </div>
+
+                                        <div class="timer d-flex align-items-center gap-3">
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="day_value">08</div>
+                                                <span>Days</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="hrs_value">08</div>
+                                                <span>Hrs</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="min_value">08</div>
+                                                <span>Min</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="sec_value">08</div>
+                                                <span>Sec</span>
+                                            </div>
+                                        </div>
+                                        <div class="shop_product_btn d-flex align-items-center justify-content-between">
+                                            <button>Quick Buy</button>
+                                            <button>Add To Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shop_single_product d-flex">
+                                    <div class="shop_product_img">
+                                        <img class="img-fluid" src="img/product-06.png" alt="product image">
+                                        <div class="rating_wrapper d-flex align-items-center">
+                                            <div class="shop_product_rating">
+                                                <span>4.4</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>3</span>
+                                            </div>
+                                        </div>
+                                        <div class="woocommerce_option d-flex align-items-center gap-3">
+                                            <span class="single_woo_option quick_view">
+                                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            </span>
+                                            <span class="single_woo_option wishlist">
+                                                <i class="fa-solid fa-heart"></i>
+                                            </span>
+                                            <span class="single_woo_option compare">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="shop_product_info">
+                                        <h3><a href="#">Cat Harness Belt</a></h3>
+                                        <div class="shop_product_price d-flex align-items-center gap-3">
+                                            <del>$155</del>
+                                            <span>$100</span>
+                                        </div>
+                                        <div class="product_description">
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+                                                tempore
+                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                            <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <div class="desc_expanded"></div>
+                                        </div>
+                                        <div class="timer d-flex align-items-center gap-3">
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="day_value">08</div>
+                                                <span>Days</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="hrs_value">08</div>
+                                                <span>Hrs</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="min_value">08</div>
+                                                <span>Min</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="sec_value">08</div>
+                                                <span>Sec</span>
+                                            </div>
+                                        </div>
+                                        <div class="shop_product_btn d-flex align-items-center justify-content-between">
+                                            <button>Quick Buy</button>
+                                            <button>Add To Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shop_single_product d-flex">
+                                    <div class="shop_product_img">
+                                        <img class="img-fluid" src="img/product-07.png" alt="product image">
+                                        <div class="rating_wrapper d-flex align-items-center">
+                                            <div class="shop_product_rating">
+                                                <span>4.4</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>3</span>
+                                            </div>
+                                        </div>
+                                        <div class="woocommerce_option d-flex align-items-center gap-3">
+                                            <span class="single_woo_option quick_view">
+                                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            </span>
+                                            <span class="single_woo_option wishlist">
+                                                <i class="fa-solid fa-heart"></i>
+                                            </span>
+                                            <span class="single_woo_option compare">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="shop_product_info">
+                                        <h3><a href="#">Cat Harness Belt</a></h3>
+                                        <div class="shop_product_price d-flex align-items-center gap-3">
+                                            <del>$89</del>
+                                            <span>$65</span>
+                                        </div>
+                                        <div class="product_description">
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+                                                tempore
+                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                            <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <div class="desc_expanded"></div>
+                                        </div>
+                                        <div class="timer d-flex align-items-center gap-3">
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="day_value">08</div>
+                                                <span>Days</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="hrs_value">08</div>
+                                                <span>Hrs</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="min_value">08</div>
+                                                <span>Min</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="sec_value">08</div>
+                                                <span>Sec</span>
+                                            </div>
+                                        </div>
+                                        <div class="shop_product_btn d-flex align-items-center justify-content-between">
+                                            <button>Quick Buy</button>
+                                            <button>Add To Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shop_single_product d-flex">
+                                    <div class="shop_product_img">
+                                        <img class="img-fluid" src="img/product-08.png" alt="product image">
+                                        <div class="rating_wrapper d-flex align-items-center">
+                                            <div class="shop_product_rating">
+                                                <span>4.4</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>3</span>
+                                            </div>
+                                        </div>
+                                        <div class="woocommerce_option d-flex align-items-center gap-3">
+                                            <span class="single_woo_option quick_view">
+                                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            </span>
+                                            <span class="single_woo_option wishlist">
+                                                <i class="fa-solid fa-heart"></i>
+                                            </span>
+                                            <span class="single_woo_option compare">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="shop_product_info">
+                                        <h3><a href="#">Cat Harness Belt</a></h3>
+                                        <div class="shop_product_price d-flex align-items-center gap-3">
+                                            <del>$80</del>
+                                            <span>$78</span>
+                                        </div>
+                                        <div class="product_description">
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+                                                tempore
+                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                            <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <div class="desc_expanded"></div>
+                                        </div>
+                                        <div class="timer d-flex align-items-center gap-3">
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="day_value">08</div>
+                                                <span>Days</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="hrs_value">08</div>
+                                                <span>Hrs</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="min_value">08</div>
+                                                <span>Min</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="sec_value">08</div>
+                                                <span>Sec</span>
+                                            </div>
+                                        </div>
+                                        <div class="shop_product_btn d-flex align-items-center justify-content-between">
+                                            <button>Quick Buy</button>
+                                            <button>Add To Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shop_single_product d-flex">
+                                    <div class="shop_product_img">
+                                        <img class="img-fluid" src="img/product-09.png" alt="product image">
+                                        <div class="rating_wrapper d-flex align-items-center">
+                                            <div class="shop_product_rating">
+                                                <span>4.4</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>3</span>
+                                            </div>
+                                        </div>
+                                        <div class="woocommerce_option d-flex align-items-center gap-3">
+                                            <span class="single_woo_option quick_view">
+                                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            </span>
+                                            <span class="single_woo_option wishlist">
+                                                <i class="fa-solid fa-heart"></i>
+                                            </span>
+                                            <span class="single_woo_option compare">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="shop_product_info">
+                                        <h3><a href="#">Cat Harness Belt</a></h3>
+                                        <div class="shop_product_price d-flex align-items-center gap-3">
+                                            <del>$80</del>
+                                            <span>$78</span>
+                                        </div>
+                                        <div class="product_description">
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+                                                tempore
+                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                            <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <div class="desc_expanded"></div>
+                                        </div>
+                                        <div class="timer d-flex align-items-center gap-3">
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="day_value">08</div>
+                                                <span>Days</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="hrs_value">08</div>
+                                                <span>Hrs</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="min_value">08</div>
+                                                <span>Min</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="sec_value">08</div>
+                                                <span>Sec</span>
+                                            </div>
+                                        </div>
+                                        <div class="shop_product_btn d-flex align-items-center justify-content-between">
+                                            <button>Quick Buy</button>
+                                            <button>Add To Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shop_single_product d-flex">
+                                    <div class="shop_product_img">
+                                        <img class="img-fluid" src="img/product-10.png" alt="product image">
+                                        <div class="rating_wrapper d-flex align-items-center">
+                                            <div class="shop_product_rating">
+                                                <span>4.4</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>3</span>
+                                            </div>
+                                        </div>
+                                        <div class="woocommerce_option d-flex align-items-center gap-3">
+                                            <span class="single_woo_option quick_view">
+                                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            </span>
+                                            <span class="single_woo_option wishlist">
+                                                <i class="fa-solid fa-heart"></i>
+                                            </span>
+                                            <span class="single_woo_option compare">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="shop_product_info">
+                                        <h3><a href="#">Cat Harness Belt</a></h3>
+                                        <div class="shop_product_price d-flex align-items-center gap-3">
+                                            <del>$80</del>
+                                            <span>$78</span>
+                                        </div>
+                                        <div class="product_description">
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+                                                tempore
+                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                            <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <div class="desc_expanded"></div>
+                                        </div>
+                                        <div class="timer d-flex align-items-center gap-3">
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="day_value">08</div>
+                                                <span>Days</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="hrs_value">08</div>
+                                                <span>Hrs</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="min_value">08</div>
+                                                <span>Min</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="sec_value">08</div>
+                                                <span>Sec</span>
+                                            </div>
+                                        </div>
+                                        <div class="shop_product_btn d-flex align-items-center justify-content-between">
+                                            <button>Quick Buy</button>
+                                            <button>Add To Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shop_single_product d-flex">
+                                    <div class="shop_product_img">
+                                        <img class="img-fluid" src="img/product-1.png" alt="product image">
+                                        <div class="rating_wrapper d-flex align-items-center">
+                                            <div class="shop_product_rating">
+                                                <span>4.4</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>3</span>
+                                            </div>
+                                        </div>
+                                        <div class="woocommerce_option d-flex align-items-center gap-3">
+                                            <span class="single_woo_option quick_view">
+                                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            </span>
+                                            <span class="single_woo_option wishlist">
+                                                <i class="fa-solid fa-heart"></i>
+                                            </span>
+                                            <span class="single_woo_option compare">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="shop_product_info">
+                                        <h3><a href="#">Cat Harness Belt</a></h3>
+                                        <div class="shop_product_price d-flex align-items-center gap-3">
+                                            <del>$80</del>
+                                            <span>$78</span>
+                                        </div>
+                                        <div class="product_description">
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+                                                tempore
+                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                            <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <div class="desc_expanded"></div>
+                                        </div>
+                                        <div class="timer d-flex align-items-center gap-3">
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="day_value">08</div>
+                                                <span>Days</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="hrs_value">08</div>
+                                                <span>Hrs</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="min_value">08</div>
+                                                <span>Min</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="sec_value">08</div>
+                                                <span>Sec</span>
+                                            </div>
+                                        </div>
+                                        <div class="shop_product_btn d-flex align-items-center justify-content-between">
+                                            <button>Quick Buy</button>
+                                            <button>Add To Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shop_single_product d-flex">
+                                    <div class="shop_product_img">
+                                        <img class="img-fluid" src="img/product-2.png" alt="product image">
+                                        <div class="rating_wrapper d-flex align-items-center">
+                                            <div class="shop_product_rating">
+                                                <span>4.4</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>3</span>
+                                            </div>
+                                        </div>
+                                        <div class="woocommerce_option d-flex align-items-center gap-3">
+                                            <span class="single_woo_option quick_view">
+                                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            </span>
+                                            <span class="single_woo_option wishlist">
+                                                <i class="fa-solid fa-heart"></i>
+                                            </span>
+                                            <span class="single_woo_option compare">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="shop_product_info">
+                                        <h3><a href="#">Cat Harness Belt</a></h3>
+                                        <div class="shop_product_price d-flex align-items-center gap-3">
+                                            <del>$80</del>
+                                            <span>$78</span>
+                                        </div>
+                                        <div class="product_description">
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+                                                tempore
+                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                            <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <div class="desc_expanded"></div>
+                                        </div>
+                                        <div class="timer d-flex align-items-center gap-3">
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="day_value">08</div>
+                                                <span>Days</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="hrs_value">08</div>
+                                                <span>Hrs</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="min_value">08</div>
+                                                <span>Min</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="sec_value">08</div>
+                                                <span>Sec</span>
+                                            </div>
+                                        </div>
+                                        <div class="shop_product_btn d-flex align-items-center justify-content-between">
+                                            <button>Quick Buy</button>
+                                            <button>Add To Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shop_single_product d-flex">
+                                    <div class="shop_product_img">
+                                        <img class="img-fluid" src="img/product-06.png" alt="product image">
+                                        <div class="rating_wrapper d-flex align-items-center">
+                                            <div class="shop_product_rating">
+                                                <span>4.4</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>3</span>
+                                            </div>
+                                        </div>
+                                        <div class="woocommerce_option d-flex align-items-center gap-3">
+                                            <span class="single_woo_option quick_view">
+                                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            </span>
+                                            <span class="single_woo_option wishlist">
+                                                <i class="fa-solid fa-heart"></i>
+                                            </span>
+                                            <span class="single_woo_option compare">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="shop_product_info">
+                                        <h3><a href="#">Cat Harness Belt</a></h3>
+                                        <div class="shop_product_price d-flex align-items-center gap-3">
+                                            <del>$80</del>
+                                            <span>$78</span>
+                                        </div>
+                                        <div class="product_description">
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+                                                tempore
+                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                            <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <div class="desc_expanded"></div>
+                                        </div>
+                                        <div class="timer d-flex align-items-center gap-3">
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="day_value">08</div>
+                                                <span>Days</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="hrs_value">08</div>
+                                                <span>Hrs</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="min_value">08</div>
+                                                <span>Min</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="sec_value">08</div>
+                                                <span>Sec</span>
+                                            </div>
+                                        </div>
+                                        <div class="shop_product_btn d-flex align-items-center justify-content-between">
+                                            <button>Quick Buy</button>
+                                            <button>Add To Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shop_single_product d-flex">
+                                    <div class="shop_product_img">
+                                        <img class="img-fluid" src="img/product-11.png" alt="product image">
+                                        <div class="rating_wrapper d-flex align-items-center">
+                                            <div class="shop_product_rating">
+                                                <span>4.4</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>3</span>
+                                            </div>
+                                        </div>
+                                        <div class="woocommerce_option d-flex align-items-center gap-3">
+                                            <span class="single_woo_option quick_view">
+                                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            </span>
+                                            <span class="single_woo_option wishlist">
+                                                <i class="fa-solid fa-heart"></i>
+                                            </span>
+                                            <span class="single_woo_option compare">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="shop_product_info">
+                                        <h3><a href="#">Cat Harness Belt</a></h3>
+                                        <div class="shop_product_price d-flex align-items-center gap-3">
+                                            <del>$80</del>
+                                            <span>$78</span>
+                                        </div>
+                                        <div class="product_description">
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+                                                tempore
+                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                            <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <div class="desc_expanded"></div>
+                                        </div>
+                                        <div class="timer d-flex align-items-center gap-3">
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="day_value">08</div>
+                                                <span>Days</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="hrs_value">08</div>
+                                                <span>Hrs</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="min_value">08</div>
+                                                <span>Min</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="sec_value">08</div>
+                                                <span>Sec</span>
+                                            </div>
+                                        </div>
+                                        <div class="shop_product_btn d-flex align-items-center justify-content-between">
+                                            <button>Quick Buy</button>
+                                            <button>Add To Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shop_single_product d-flex">
+                                    <div class="shop_product_img">
+                                        <img class="img-fluid" src="img/product-12.png" alt="product image">
+                                        <div class="rating_wrapper d-flex align-items-center">
+                                            <div class="shop_product_rating">
+                                                <span>4.4</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>3</span>
+                                            </div>
+                                        </div>
+                                        <div class="woocommerce_option d-flex align-items-center gap-3">
+                                            <span class="single_woo_option quick_view">
+                                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            </span>
+                                            <span class="single_woo_option wishlist">
+                                                <i class="fa-solid fa-heart"></i>
+                                            </span>
+                                            <span class="single_woo_option compare">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="shop_product_info">
+                                        <h3><a href="#">Cat Harness Belt</a></h3>
+                                        <div class="shop_product_price d-flex align-items-center gap-3">
+                                            <del>$80</del>
+                                            <span>$78</span>
+                                        </div>
+                                        <div class="product_description">
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+                                                tempore
+                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                            <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <div class="desc_expanded"></div>
+                                        </div>
+                                        <div class="timer d-flex align-items-center gap-3">
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="day_value">08</div>
+                                                <span>Days</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="hrs_value">08</div>
+                                                <span>Hrs</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="min_value">08</div>
+                                                <span>Min</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="sec_value">08</div>
+                                                <span>Sec</span>
+                                            </div>
+                                        </div>
+                                        <div class="shop_product_btn d-flex align-items-center justify-content-between">
+                                            <button>Quick Buy</button>
+                                            <button>Add To Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shop_single_product d-flex">
+                                    <div class="shop_product_img">
+                                        <img class="img-fluid" src="img/product-11.png" alt="product image">
+                                        <div class="rating_wrapper d-flex align-items-center">
+                                            <div class="shop_product_rating">
+                                                <span>4.4</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>3</span>
+                                            </div>
+                                        </div>
+                                        <div class="woocommerce_option d-flex align-items-center gap-3">
+                                            <span class="single_woo_option quick_view">
+                                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                            </span>
+                                            <span class="single_woo_option wishlist">
+                                                <i class="fa-solid fa-heart"></i>
+                                            </span>
+                                            <span class="single_woo_option compare">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="shop_product_info">
+                                        <h3><a href="#">Cat Harness Belt</a></h3>
+                                        <div class="shop_product_price d-flex align-items-center gap-3">
+                                            <del>$80</del>
+                                            <span>$78</span>
+                                        </div>
+                                        <div class="product_description">
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+                                                tempore
+                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                            <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <div class="desc_expanded"></div>
+                                        </div>
+                                        <div class="timer d-flex align-items-center gap-3">
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="day_value">08</div>
+                                                <span>Days</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="hrs_value">08</div>
+                                                <span>Hrs</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="min_value">08</div>
+                                                <span>Min</span>
+                                            </div>
+                                            <div
+                                                class="single_timer d-flex flex-column justify-content-center align-items-center gap-1">
+                                                <div class="sec_value">08</div>
+                                                <span>Sec</span>
+                                            </div>
+                                        </div>
+                                        <div class="shop_product_btn d-flex align-items-center justify-content-between">
+                                            <button>Quick Buy</button>
+                                            <button>Add To Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination_container d-flex align-items-center justify-content-between ">
+                        <div class="pagination" data-total-count="40" data-take="10"></div>
+                        <div class="short_by d-flex align-items-center justify-content-between ">
+                            <p>Page: <span class="page_no">1</span> of <span class="total_pages">4</span></p>
                         </div>
                     </div>
                 </div>
@@ -1018,8 +1789,6 @@
         </div>
     </section>
     <!--shop main body end-->
-
-
     <footer>
         <div class="container-fluid container-xl">
             <div class="footer_wrapper">
