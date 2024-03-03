@@ -63,25 +63,112 @@ decrease_button.forEach((btn, index) => {
 
 // shop script start*****
 
-// //for side bar handling
-// const sideBar_close = document.querySelector(".side_bar_close");
-// const side_bar = document.querySelector("aside");
-// const product_container = document.querySelector(".product_container");
-// const sideBar_show = document.querySelector(".sidebar_show");
+//product view handling
+const grid_view = document.querySelector(".grid2_view");
+const list_view = document.querySelector(".list_view");
+const grid_view3 = document.querySelector(".grid3_view");
+const single_p_product = document.querySelectorAll(".shop_single_product");
+const single_p_img = document.querySelectorAll(".shop_product_img");
+const single_p_info = document.querySelectorAll(".shop_product_info");
+const single_p_container = document.querySelector(".product_container_body");
 
-// sideBar_close.addEventListener("click", () => {
-//   side_bar.style.display = "none";
-//   product_container.style.width = "100%";
-//   sideBar_show.style.display = "grid";
+list_view.addEventListener("click", () => {
+  function adjustGrid2Layout() {
 
-// })
-// sideBar_show.addEventListener("click", () => {
-//   side_bar.style.display = "block";
-//   product_container.style.width = "calc(100% - 300px)";
-//   sideBar_show.style.display = "none"
-// })
+    if (window.matchMedia("(max-width: 856px)").matches) {
+      single_p_container.style.gridTemplateColumns = "1fr";
+    } else if (window.matchMedia("(max-width: 1200px)").matches) {
+      single_p_container.style.gridTemplateColumns = "1fr 1fr";
+    }
+    else {
+      single_p_container.style.gridTemplateColumns = "1fr 1fr";
+    }
+  }
 
-//script for pagination
+  // Initial adjustment when the page loads
+  adjustGrid2Layout();
+
+  // Event listener for window resize
+  window.addEventListener("resize", adjustGrid2Layout);
+
+  single_p_product.forEach(pdc => {
+    pdc.style.flexDirection = "row"
+  })
+  single_p_img.forEach(img => {
+    img.classList.remove("grid_img")
+  })
+  single_p_info.forEach(info => {
+    info.classList.remove("grid_info")
+  })
+})
+
+grid_view3.addEventListener("click", () => {
+  function adjustGrid3Layout() {
+
+    if (window.matchMedia("(max-width: 856px)").matches) {
+      single_p_container.style.gridTemplateColumns = "1fr";
+    } else if (window.matchMedia("(max-width: 1200px)").matches) {
+      single_p_container.style.gridTemplateColumns = "1fr 1fr";
+    }
+    else {
+      single_p_container.style.gridTemplateColumns = "1fr 1fr 1fr";
+    }
+  }
+
+  // Initial adjustment when the page loads
+  adjustGrid3Layout();
+
+  // Event listener for window resize
+  window.addEventListener("resize", adjustGrid3Layout);
+
+  single_p_product.forEach(pdc => {
+    pdc.style.flexDirection = "row"
+  })
+  single_p_img.forEach(img => {
+    img.classList.remove("grid_img")
+
+  })
+  single_p_info.forEach(info => {
+    info.classList.remove("grid_info")
+  })
+})
+
+grid_view.addEventListener("click", () => {
+
+  single_p_product.forEach(pdc => {
+    pdc.style.flexDirection = "column"
+  })
+  single_p_img.forEach(img => {
+    img.classList.add("grid_img")
+  })
+  single_p_info.forEach(info => {
+    info.classList.add("grid_info")
+  })
+  function adjustGridLayout() {
+    single_p_info.forEach(info => {
+      if (info.className.includes("grid_info")) {
+        if (window.matchMedia("(max-width: 660px)").matches) {
+          single_p_container.style.gridTemplateColumns = "1fr";
+        } else if (window.matchMedia("(max-width: 860px)").matches) {
+          single_p_container.style.gridTemplateColumns = "1fr 1fr";
+        } else if (window.matchMedia("(max-width: 1024px)").matches) {
+          single_p_container.style.gridTemplateColumns = "1fr 1fr 1fr";
+        }
+        else {
+          single_p_container.style.gridTemplateColumns = "1fr 1fr 1fr 1fr";
+        }
+      }
+    })
+  }
+
+  // Initial adjustment when the page loads
+  adjustGridLayout();
+
+  // Event listener for window resize
+  window.addEventListener("resize", adjustGridLayout);
+})
+
+
 //script for pagination
 const current_page_no = document.querySelector(".page_no");
 $('.pagination').pajinatify({
@@ -194,10 +281,10 @@ let minValue = document.querySelectorAll(".min_value");
 let secValue = document.querySelectorAll(".sec_value");
 
 // Set the date you're counting down to (replace with your desired date)
-const countdownDate = new Date("march 10, 2024 00:00:00").getTime();
+const countdownDate = new Date("May 10, 2024 04:04:40").getTime();
 
 // Update the countdown every 1 second
-const countdownInterval = setInterval(function() {
+const countdownInterval = setInterval(function () {
   // Get the current date and time
   const now = new Date().getTime();
 
@@ -211,23 +298,24 @@ const countdownInterval = setInterval(function() {
   const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
   // Update the HTML elements with the calculated values
-  dayValue.forEach( value => {
+  dayValue.forEach(value => {
     value.textContent = formatTime(days);
-  }) 
-  hrsValue.forEach( value => {
+  })
+  hrsValue.forEach(value => {
     value.textContent = formatTime(hours);
-  }) 
-  minValue.forEach( value => {
+  })
+  minValue.forEach(value => {
     value.textContent = formatTime(minutes);
-  }) 
-  secValue.forEach( value => {
+  })
+  secValue.forEach(value => {
     value.textContent = formatTime(seconds);
-  }) 
-  
+  })
+
   // If the countdown is over, display a message or perform any action
   if (timeRemaining < 0) {
     clearInterval(countdownInterval);
     // You can add a message or perform an action when the countdown is over
+    console
   }
 }, 1000);
 
@@ -244,7 +332,7 @@ expand_buttons.forEach(ex_btn => {
   ex_btn.addEventListener("click", () => {
     const expand_text = ex_btn.closest(".product_description").querySelector("p");
     const expand_overlay = ex_btn.closest(".product_description").querySelector(".desc_expanded");
-   
+
     if (is_clicked) {
       expand_text.style.height = "auto";
       expand_overlay.style.display = "none"
@@ -278,11 +366,11 @@ $(".accordion-title").click(function () {
 
 //sticky header script
 $(document).ready(() => {
-  const heroSectionBottom = $(".product_container_body").offset().top + $(".product_container_body").outerHeight();
+  const heroSectionBottom = $(".product_area").offset().top + $(".product_area").outerHeight();
   $(window).on("scroll", () => {
     const scrollPosition = $(window).scrollTop();
 
-    if (scrollPosition >= (heroSectionBottom - 1500)) {
+    if (scrollPosition >= (heroSectionBottom - 1700)) {
       $("header").addClass("sticky_animation");
       $(".top-haeder").addClass("hide_top_header")
     } else {
@@ -297,15 +385,16 @@ $(document).ready(() => {
 
 const quick_view_area = document.querySelector(".quick_view_popup")
 const quick_view_btn = document.querySelector(".close_quick_view")
-const quick_view_open = document.querySelectorAll(".quick_view_btn");
+const quick_view_open = document.querySelectorAll(".quick_view");
 quick_view_open.forEach(btn => {
   btn.addEventListener("click", () => {
     quick_view_area.style.display = "flex"
+    document.body.style.overflow = "hidden"
   })
 })
-// const quick_view_btn = document.querySelector(".close_quick_view")
 quick_view_btn.addEventListener("click", () => {
   quick_view_area.style.display = "none"
+  document.body.style.overflow = "auto"
 })
 
 

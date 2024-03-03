@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +25,6 @@
     <div class="offcanvas offcanvas-start filter_side" tabindex="-1" id="offcanvasExample1">
         <aside>
             <div class="aside_wrapper">
-
                 <button type="button" class="btn-close1" data-bs-dismiss="offcanvas" aria-label="Close"><i
                         class="fa-solid fa-x"></i></button>
                 <div class="aside_title d-flex justify-content-between align-items-center ">
@@ -191,11 +191,6 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="thub_img">
-                                        <img class="img-fluid " src="img/product-1.png" alt="slider product image" />
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="thub_img">
                                         <img class="img-fluid " src="img/product-2.png" alt="slider product image" />
                                     </div>
                                 </div>
@@ -223,40 +218,36 @@
                     <div class="right_side">
                         <a href="#">Pet Care</a>
                         <h3 class="p_title">Dog/Pet Beautiful Carrier</h3>
-                        <p class="quick_price">$120</p>
-                        <div class="rating_info">
-                            <table class="rating">
-                                <tr>
-                                    <td>Rating:</td>
-                                    <td>
-                                        <div class="rating_star">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Availability:
-                                    </td>
-                                    <td>
-                                        <b>In Stock</b>
-                                    </td>
-                                </tr>
-                            </table>
+                        <div class="review d-flex align-items-center">
+                            <div class="r_left d-flex align-items-center">
+                                <div class="rating_star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <div class="review_count">
+                                    4.3 / 10 reviews
+                                </div>
+                            </div>
+                            <div class="r_right">
+                                <div class="product_status"><span>IN STOCK</span></div>
+                            </div>
+                        </div>
+                        <div class="details_btn">
+                            <a href="#" >VIEW FULL PRODUCT DETAILS <i class="fa-solid fa-chevron-right ms-2" ></i></a>
                         </div>
                         <p class="product_des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptate
                             dolor illum voluptas. Omnis molestias dolorum necessitatibus, ducimus magni.</p>
+                        <div class="quick_price">$120</div>
                         <div class="product_option_area d-flex align-items-center gap-4">
                             <div class="quantity">
                                 <h4>Quantity</h4>
                                 <div class="quantity_wrapper d-flex align-items-center ">
-                                    <span class="decrease"><i class="fa-solid fa-minus"></i></span>
+                                    <button class="decrease"><i class="fa-solid fa-minus"></i></button>
                                     <input type="number" class="cart_value" min="1" value="1">
-                                    <span class="increase"><i class="fa-solid fa-plus"></i></span>
+                                    <button class="increase"><i class="fa-solid fa-plus"></i></button>
                                 </div>
                             </div>
                             <ul class="ps-0 mb-0">
@@ -264,8 +255,16 @@
                                 <li class="list-unstyled"><b>Tags:</b> pet care</li>
                             </ul>
                         </div>
-                        <div class="add_btn mt-5">
+                        <div class="add_btn d-flex align-items-center gap-3 ">
                             <a href="#">Add To Cart</a>
+                            <a href="#"><i class="fa-regular fa-heart"></i>Add To Wishlist</a>
+                        </div>
+                        <div class="social_button d-flex align-items-center gap-2">
+                            <span>Share:</span>
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -285,9 +284,9 @@
         <div class="offcanvas-body">
             <div id="accordion" class="accordion-container">
                 <a href="#" class="menu_item"><i class="fa-regular fa-user"></i> Login/Register</a>
-                <a href="index.html" class="accordion-title menu_item">Home</a>
+                <a href="#" class="accordion-title menu_item">Home</a>
                 <div class="accordion-content">
-                    <a href="#">Home page 1</a>
+                    <a href="index.html">Home page 1</a>
                     <a href="#">Home page 2</a>
                     <a href="#">Home page 3</a>
                 </div>
@@ -956,20 +955,14 @@
                                     <p class="mb-0">Showing <span class="show_item">18</span> of <span
                                             class="total_item">36</span> result</p>
                                     <div class="product_view d-flex ">
-                                        <div class="single_view list_view">
-                                            <i class="fa-solid fa-grip-lines"></i>
-                                        </div>
                                         <div class="single_view grid2_view">
                                             <i class="fa-solid fa-grip-lines-vertical"></i>
                                         </div>
+                                        <div class="single_view list_view">
+                                            <i class="fa-solid fa-grip-lines"></i>
+                                        </div>
                                         <div class="single_view grid3_view">
                                             <i class="fa-solid fa-table-cells"></i>
-                                        </div>
-                                        <div class="single_view grid4_view d-none d-lg-grid ">
-                                            <i class="fa-solid fa-grip"></i>
-                                        </div>
-                                        <div class="single_view grid5_view d-none d-xl-grid ">
-                                            <i class="fa-solid fa-border-none"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -1047,7 +1040,7 @@
                                         <div class="product_description">
                                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
                                                 tempore
-                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                                quod ipsum quibusdam cumque cupiditate quidem. ectetur adipisicing elit</p>
                                             <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
                                             <div class="desc_expanded"></div>
                                         </div>
@@ -1111,7 +1104,7 @@
                                         <div class="product_description">
                                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
                                                 tempore
-                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                                quod ipsum quibusdam cumque cupiditate quidem. ectetur adipisicing elit</p>
                                             <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
                                             <div class="desc_expanded"></div>
                                         </div>
@@ -1174,7 +1167,7 @@
                                         <div class="product_description">
                                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
                                                 tempore
-                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                                quod ipsum quibusdam cumque cupiditate quidem. ectetur adipisicing elit</p>
                                             <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
                                             <div class="desc_expanded"></div>
                                         </div>
@@ -1237,7 +1230,7 @@
                                         <div class="product_description">
                                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
                                                 tempore
-                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                                quod ipsum quibusdam cumque cupiditate quidem. ectetur adipisicing elit</p>
                                             <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
                                             <div class="desc_expanded"></div>
                                         </div>
@@ -1300,7 +1293,7 @@
                                         <div class="product_description">
                                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
                                                 tempore
-                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                                quod ipsum quibusdam cumque cupiditate quidem. ectetur adipisicing elit</p>
                                             <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
                                             <div class="desc_expanded"></div>
                                         </div>
@@ -1363,7 +1356,7 @@
                                         <div class="product_description">
                                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
                                                 tempore
-                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                                quod ipsum quibusdam cumque cupiditate quidem. ectetur adipisicing elit</p>
                                             <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
                                             <div class="desc_expanded"></div>
                                         </div>
@@ -1426,7 +1419,7 @@
                                         <div class="product_description">
                                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
                                                 tempore
-                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                                quod ipsum quibusdam cumque cupiditate quidem. ectetur adipisicing elit</p>
                                             <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
                                             <div class="desc_expanded"></div>
                                         </div>
@@ -1489,7 +1482,7 @@
                                         <div class="product_description">
                                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
                                                 tempore
-                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                                quod ipsum quibusdam cumque cupiditate quidem. ectetur adipisicing elit</p>
                                             <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
                                             <div class="desc_expanded"></div>
                                         </div>
@@ -1552,7 +1545,7 @@
                                         <div class="product_description">
                                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
                                                 tempore
-                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                                quod ipsum quibusdam cumque cupiditate quidem. ectetur adipisicing elit</p>
                                             <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
                                             <div class="desc_expanded"></div>
                                         </div>
@@ -1615,7 +1608,7 @@
                                         <div class="product_description">
                                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
                                                 tempore
-                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                                quod ipsum quibusdam cumque cupiditate quidem. ectetur adipisicing elit</p>
                                             <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
                                             <div class="desc_expanded"></div>
                                         </div>
@@ -1678,7 +1671,7 @@
                                         <div class="product_description">
                                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
                                                 tempore
-                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                                quod ipsum quibusdam cumque cupiditate quidem. ectetur adipisicing elit</p>
                                             <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
                                             <div class="desc_expanded"></div>
                                         </div>
@@ -1741,7 +1734,7 @@
                                         <div class="product_description">
                                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
                                                 tempore
-                                                quod ipsum quibusdam cumque cupiditate quidem.</p>
+                                                quod ipsum quibusdam cumque cupiditate quidem. ectetur adipisicing elit</p>
                                             <span class="expand_btn"><i class="fa-solid fa-chevron-down"></i></span>
                                             <div class="desc_expanded"></div>
                                         </div>

@@ -1463,6 +1463,8 @@
  .side_menu_item button.btn-close:hover {
      transform: rotate(360deg);
      transition: .6s;
+     color: var(--color-three) !important;
+     opacity: 1 !important;
  }
 
  .appoinment_popup .appoinment_wrapper .appoinment_form button:hover {
