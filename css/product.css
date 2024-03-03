@@ -1195,6 +1195,33 @@ form.search_items {
 
 
 
+/* product body style start */
+.comming_soon {
+    height: 100vh;
+    font-size: 5vw;
+    color: var(--color-two);
+    font-weight: 700;
+    font-family: "Comfortaa", sans-serif;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  /* footer style */
  footer {
     padding-top: 40px;

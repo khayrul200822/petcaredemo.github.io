@@ -60,6 +60,32 @@ decrease_button.forEach((btn, index) => {
   })
 })
 
+
+//sticky header script
+$(document).ready(() => {
+  const heroSectionBottom = $(".comming_soon").offset().top + $(".comming_soon").outerHeight();
+  $(window).on("scroll", () => {
+    const scrollPosition = $(window).scrollTop();
+
+    if (scrollPosition >= (heroSectionBottom -1200)) {
+      $("header").addClass("sticky_animation");
+      $(".top-haeder").addClass("hide_top_header")
+    } else {
+      $("header").removeClass("sticky_animation");
+      $(".top-haeder").removeClass("hide_top_header");
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
+
 // accordian script
 $(".accordion-content").css("display", "none");
 
