@@ -1202,7 +1202,7 @@ form.search_items {
 ul.breadcrumb_div {
     margin-bottom: 0;
     display: flex;
-    padding-block: 5px;
+    padding-block: 10px;
 }
 
 ul.breadcrumb_div li {
@@ -1392,6 +1392,8 @@ aside .aside_wrapper>button:hover {
 aside {
     position: relative;
     width: 280px;
+    background: #f4f5f7;
+    border-radius: 10px;
 }
 
 aside .aside_wrapper {
@@ -1565,6 +1567,7 @@ aside .category .single_category label:hover {
 
 .filter_side {
     width: 300px;
+    background: #f4f5f7;
 }
 
 .main_page {
@@ -1649,6 +1652,7 @@ aside .category .single_category label:hover {
 .columns {
     display: grid;
     grid-template-columns: auto auto;
+    margin-bottom: 20px;
 }
 
 .main_page .product_left {
@@ -2009,6 +2013,7 @@ aside .category .single_category label:hover {
 }
 .offcanvas-xl.offcanvas-start {
     width: 280px;
+    background: #f4f5f7;
 }
 
 .next_privious_poduct a.p_btn {
@@ -2075,6 +2080,9 @@ aside .category .single_category label:hover {
 .main_page .product_right .flash_seal .flash_seal_countdown .countdown .flash_timer .countdown_div:last-child {
     background: var(--color-one);
     color: var(--color-three);
+}
+.hide_top_header {
+    display: none;
 }
 
 
