@@ -61,27 +61,67 @@ decrease_button.forEach((btn, index) => {
 })
 
 
-//sticky header script
-$(document).ready(() => {
-  const heroSectionBottom = $(".comming_soon").offset().top + $(".comming_soon").outerHeight();
-  $(window).on("scroll", () => {
-    const scrollPosition = $(window).scrollTop();
+// //sticky header script
+// $(document).ready(() => {
+//   const heroSectionBottom = $(".comming_soon").offset().top + $(".comming_soon").outerHeight();
+//   $(window).on("scroll", () => {
+//     const scrollPosition = $(window).scrollTop();
 
-    if (scrollPosition >= (heroSectionBottom -1200)) {
-      $("header").addClass("sticky_animation");
-      $(".top-haeder").addClass("hide_top_header")
-    } else {
-      $("header").removeClass("sticky_animation");
-      $(".top-haeder").removeClass("hide_top_header");
-    }
-  });
-});
-
-
+//     if (scrollPosition >= (heroSectionBottom -1200)) {
+//       $("header").addClass("sticky_animation");
+//       $(".top-haeder").addClass("hide_top_header")
+//     } else {
+//       $("header").removeClass("sticky_animation");
+//       $(".top-haeder").removeClass("hide_top_header");
+//     }
+//   });
+// });
 
 
 
 
+
+//cout down for offer
+let dayValue = document.querySelector(".day_value");
+let hrsValue = document.querySelector(".hrs_value");
+let minValue = document.querySelector(".min_value");
+let secValue = document.querySelector(".sec_value");
+
+// Set the date you're counting down to (replace with your desired date)
+const countdownDate = new Date("May 10, 2024 04:04:40").getTime();
+
+// Update the countdown every 1 second
+const countdownInterval = setInterval(function () {
+  // Get the current date and time
+  const now = new Date().getTime();
+
+  // Calculate the remaining time
+  const timeRemaining = countdownDate - now;
+
+  // Calculate days, hours, minutes, and seconds
+  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+  // Update the HTML elements with the calculated values
+  dayValue.textContent = formatTime(days);
+  hrsValue.textContent = formatTime(hours);
+  minValuetextContent = formatTime(minutes);
+  secValue.textContent = formatTime(seconds);
+
+  // If the countdown is over, display a message or perform any action
+  if (timeRemaining < 0) {
+    clearInterval(countdownInterval);
+    // You can add a message or perform an action when the countdown is over
+    console
+  }
+}, 1000);
+
+// Function to format time values with leading zeros
+function formatTime(value) {
+  return value < 10 ? "0" + value : value;
+}
 
 
 
@@ -154,6 +194,45 @@ quick_view_btn.addEventListener("click" , () => {
 });
 
 
+//script for adding gallary
+var swiper = new Swiper(".mySwiper7", {
+  spaceBetween: 1,
+  slidesPerView: 4,
+  watchSlidesProgress: true,
+  pagination: {
+    el: ".swiper-pagination7",
+    clickable: true,
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    380: {
+      slidesPerView: 3,
+      spaceBetween: 10
+    },
+    480: {
+      slidesPerView: 4,
+      spaceBetween: 10
+    },
+    // when window width is >= 480px
+    668: {
+      slidesPerView: 5,
+      spaceBetween: 10
+    },
+
+  }
+})
+var swiper2 = new Swiper(".mySwiper8", {
+  spaceBetween: 30,
+
+  navigation: {
+    nextEl: ".swiper-button-next8",
+    prevEl: ".swiper-button-prev8",
+  },
+  thumbs: {
+    swiper: swiper,
+  }
+}
+);
 
 
 
@@ -185,7 +264,7 @@ var swiper = new Swiper(".mySwiper6", {
 
   }
 })
-var swiper3 = new Swiper(".mySwiper5", {
+var swiper2 = new Swiper(".mySwiper5", {
   spaceBetween: 30,
 
   navigation: {
@@ -197,3 +276,4 @@ var swiper3 = new Swiper(".mySwiper5", {
   }
 }
 );
+

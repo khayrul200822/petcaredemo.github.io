@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/jquery.pajinatify.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/cwa_lightbox_css.css">
 </head>
 
 <body>
@@ -157,7 +158,7 @@
                 <a href="#" class="menu_item"><i class="fa-regular fa-user"></i> Login/Register</a>
                 <a href="#" class="accordion-title menu_item">Home</a>
                 <div class="accordion-content">
-                    <a href="#">Home page 1</a>
+                    <a href="index.html">Home page 1</a>
                     <a href="#">Home page 2</a>
                     <a href="#">Home page 3</a>
                 </div>
@@ -618,7 +619,7 @@
                         <div class="main_menu_container">
                             <ul class="ps-0 mb-0 d-flex align-items-center">
                                 <li class="list-unstyled">
-                                    <a href="#">Home <i class="fa-solid fa-angle-down ms-2"></i></a>
+                                    <a href="index.html">Home <i class="fa-solid fa-angle-down ms-2"></i></a>
                                     <div class="dropdown_menu">
                                         <ul class="ps-0 mb-0">
                                             <li class="list-unstyled"><a href="#">Home - 01</a></li>
@@ -768,10 +769,390 @@
             </div>
         </div>
     </header>
+    <section class="product_page">
+        <div class="contaienr-fluid container-xl">
+            <div class="product_page_wrapper d-flex flex-column ">
+                <ul class="breadcrumb_div ps-0">
+                    <li class="list-unstyled">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="list-unstyled">
+                        Single Product
+                    </li>
+                </ul>
+                <div class="product_page_header d-flex justify-content-center  d-xl-none">
+                    <div class="side_bar_open">
+                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample1"
+                            aria-controls="offcanvasExample1">
+                            <i class="fa-solid fa-filter"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="offcanvas-xl offcanvas-start filter_side" tabindex="-1" id="offcanvasExample1">
+                        <aside>
+                            <div class="aside_wrapper">
+                                <div class="aside_title d-flex justify-content-between align-items-center ">
+                                    <h2>Filter</h2>
+                                    <button type="reset">Clear</button>
+                                </div>
+                                <div class="category mb-5">
+                                    <h2 class="div_title">Category</h2>
+                                    <div class="category_wrapper">
+                                        <div class="single_category">
+                                            <input type="checkbox" id="category1">
+                                            <label for="category1">Pet Accessories</label>
+                                        </div>
+                                        <div class="single_category">
+                                            <input type="checkbox" id="category2">
+                                            <label for="category2">Pet Medicine</label>
+                                        </div>
+                                        <div class="single_category">
+                                            <input type="checkbox" id="category3">
+                                            <label for="category3">Pet Toyes</label>
+                                        </div>
+                                        <div class="single_category">
+                                            <input type="checkbox" id="category4">
+                                            <label for="category4">Pet Feshion</label>
+                                        </div>
+                                        <div class="single_category">
+                                            <input type="checkbox" id="category5">
+                                            <label for="category5">Pet Food</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter_price mb-5">
+                                    <div class="price_head d-flex align-items-center justify-content-between ">
+                                        <h2 class="div_title">Price</h2>
+                                        <button>Filter</button>
+                                    </div>
+                                    <div class="price_inputs d-flex justify-content-between ">
+                                        <div class="field">
+                                            <span>$</span>
+                                            <input type="number" name="number" value="0" min="0" max="1000"
+                                                class="minNumber">
+                                        </div>
+                                        <div class="separator">
+                                            -
+                                        </div>
+                                        <div class="field">
+                                            <span>$</span>
+                                            <input type="number" name="number" value="1000" min="0" max="1000"
+                                                class="maxNumber">
+                                        </div>
+                                    </div>
+                                    <div class="price_ragne">
+                                        <div class="price_progress">
+                                        </div>
+                                        <div class="range_div">
+                                            <input type="range" name="range" min="0" max="1000" value="0"
+                                                class="min_price_range">
+                                            <input type="range" name="range" min="0" max="1000" value="10000"
+                                                class="max_price_range">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="popular_product mb-5">
+                                    <h2 class="div_title">Top Products</h2>
+                                    <div class="popular_wrapper">
+                                        <div class="single_product d-flex align-items-center mb-3">
+                                            <div class="product_img">
+                                                <img class="img-fluid " src="img/product-2.png" alt="product Image">
+                                            </div>
+                                            <div class="product_info">
+                                                <div class="product_rating d-flex gap-1 ">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </div>
+                                                <h3 class="product_title"><a href="#">Cat Harness Belt</a></h3>
+                                                <p class="product_price">$80.00</p>
+                                            </div>
+                                        </div>
+                                        <div class="single_product d-flex align-items-center mb-3">
+                                            <div class="product_img">
+                                                <img class="img-fluid " src="img/product-1b.png" alt="product Image">
+                                            </div>
+                                            <div class="product_info">
+                                                <div class="product_rating d-flex gap-1 ">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                                </div>
+                                                <h3 class="product_title"><a href="#">Pet Carrier</a></h3>
+                                                <p class="product_price">$55.00</p>
+                                            </div>
+                                        </div>
+                                        <div class="single_product d-flex align-items-center mb-3">
+                                            <div class="product_img">
+                                                <img class="img-fluid " src="img/product-3.png" alt="product Image">
+                                            </div>
+                                            <div class="product_info">
+                                                <div class="product_rating d-flex gap-1 ">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </div>
+                                                <h3 class="product_title"><a href="#">Pet Nail Trimmer</a></h3>
+                                                <p class="product_price">$55.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tags">
+                                    <h2 class="div_title">Tags</h2>
+                                    <div class="tags_wrapper">
+                                        <a href="#">Nail Trimmer</a>
+                                        <a href="#">Pet Carrier</a>
+                                        <a href="#">Collars</a>
+                                        <a href="#">Pet Bed</a>
+                                        <a href="#">Harness Belt</a>
+                                        <a href="#">Checked cotton</a>
+                                        <a href="#">Ear wipes</a>
+                                        <a href="#">Paw Cleaner</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                    <div class="main_page">
+                        <div class="product_left">
+                            <!-- Swiper -->
+                            <div class="swiper mySwiper8">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide ">
+                                        <a class="img_area cwa-lightbox-image" href="img/product-1b.png">
+                                            <img class="img-fluid " src="img/product-1b.png"
+                                                alt="slider product image" />
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <a class="img_area cwa-lightbox-image" href="img/product-2.png">
+                                            <img class="img-fluid " src="img/product-2.png"
+                                                alt="slider product image" />
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <a class="img_area cwa-lightbox-image" href="img/product-10.png">
+                                            <img class="img-fluid " src="img/product-10.png"
+                                                alt="slider product image" />
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a class="img_area cwa-lightbox-image" href="img/product-4.png">
+                                            <img class="img-fluid " src="img/product-4.png"
+                                                alt="slider product image" />
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a class="img_area cwa-lightbox-image" href="img/product-06.png">
+                                            <img class="img-fluid " src="img/product-06.png"
+                                                alt="slider product image" />
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a class="img_area cwa-lightbox-image" href="img/product-11.png">
+                                            <img class="img-fluid " src="img/product-11.png"
+                                                alt="slider product image" />
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a class="img_area cwa-lightbox-image" href="img/product-12.png">
+                                            <img class="img-fluid " src="img/product-12.png"
+                                                alt="slider product image" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next swiper-button-next8 custom-color"></div>
+                                <div class="swiper-button-prev swiper-button-prev8 custom-color"></div>
+                            </div>
+                            <div class="swiper mySwiper7 thumbs-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="thub_img">
+                                            <img class="img-fluid " src="img/product-1b.png"
+                                                alt="slider product image" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thub_img">
+                                            <img class="img-fluid " src="img/product-2.png"
+                                                alt="slider product image" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thub_img">
+                                            <img class="img-fluid " src="img/product-10.png"
+                                                alt="slider product image" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thub_img">
+                                            <img class="img-fluid " src="img/product-4.png"
+                                                alt="slider product image" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thub_img">
+                                            <img class="img-fluid " src="img/product-06.png"
+                                                alt="slider product image" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thub_img">
+                                            <img class="img-fluid " src="img/product-11.png"
+                                                alt="slider product image" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thub_img">
+                                            <img class="img-fluid " src="img/product-12.png"
+                                                alt="slider product image" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination7"></div>
+                            </div>
+                        </div>
+                        <div class="product_right">
+                            <div class="product_navigate">
+                                <div class="next_privious_poduct d-flex align-items-center gap-2">
+                                    <div class="others_product one">
+                                        <a class="privious_btn p_btn" href="#"><i
+                                                class="fa-solid fa-chevron-left"></i></a>
+                                        <div class="product_link">
+                                            <a href="#" class="d-block">
+                                                <img class="img-fluid" src="img/product-11.png" alt="product image">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="others_product two">
+                                        <a class="next_btn p_btn" href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                                        <div class="product_link">
+                                            <a href="#" class="d-block">
+                                                <img class="img-fluid" src="img/product-12.png" alt="product image">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Cat Harmless Belt</h3>
+                            <div class="rating d-flex align-items-center gap-3">
+                                <div class="star d-flex align-items-center gap-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <a href="#">VIEW ALL REVIEW</a>
+                            </div>
+                            <div class="price_div d-flex align-items-center">
+                                <del>$120</del>
+                                <span>$80</span>
+                                <span class="discount_rate">-10%</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quod cupiditate,
+                                accusamus explicabo, perferendis suscipit at porro.</p>
+                            <div class="flash_seal">
+                                <div class="seal_progress">
+                                    <div class="progress_main">
+                                        <div class="seal_progress_blank"></div>
+                                        <div class="seal_progress_fill"></div>
+                                    </div>
+                                    <div class="seal_progress_title">
+                                        <p><b>92%</b> Sold - Only 10 item(s) left in stock!</p>
+                                    </div>
+                                </div>
+                                <div class="flash_seal_countdown">
+                                    <div class="countdown_title d-flex gap-2 aling-items-center">
+                                        <i class="fa-solid fa-bolt"></i>
+                                        <b>Flash Seal</b>
+                                    </div>
+                                    <div class="countdown d-flex gap-3 align-items-center">
+                                        <b>END IN: </b>
+                                        <div class="flash_timer d-flex">
+                                            <div class="countdown_div day_value">08</div>
+                                            <div class="countdown_div hrs_value">08</div>
+                                            <div class="countdown_div min_value">08</div>
+                                            <div class="countdown_div sec_value">08</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <table>
+                                <tr>
+                                    <td>TAGS:</td>
+                                    <td>pet dress, pet shop</td>
+                                </tr>
+                                <tr>
+                                    <td>SKU:</td>
+                                    <td>PT - 523</td>
+                                </tr>
+                                <tr>
+                                    <td>CATEGORY:</td>
+                                    <td>Pet accessories</td>
+                                </tr>
+                            </table>
+                            <div class="color_div">
+                                <b>COLOR:</b>
+                                <div class="color_plate d-flex aling-items-center gap-3">
+                                    <div class="single_color"></div>
+                                    <div class="single_color"></div>
+                                    <div class="single_color"></div>
+                                    <div class="single_color"></div>
+                                </div>
+                            </div>
+                            <div class="product_size">
+                                <b>SIZE:</b>
+                                <div class="size_plate d-flex aling-items-center gap-3">
+                                    <div class="size_div">L</div>
+                                    <div class="size_div">M</div>
+                                    <div class="size_div">XL</div>
+                                    <div class="size_div">XXL</div>
 
-    <div class="comming_soon d-flex justify-content-center align-items-center ">
-        COMMING SOON
-    </div>
+                                </div>
+                            </div>
+                            <div class="product_quantity">
+                                <b>QUANTITY:</b>
+                                <div class="quantity_wrapper ">
+                                    <div class="quantity_fields">
+                                        <button class="decrease">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </button>
+                                        <input type="number" class="cart_value" value="1" min="1">
+                                        <button class="increase">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
+                                    </div>
+                                    <button class="cart_btn">ADD TO CART</button>
+                                    <button><i class="fa-regular fa-heart"></i></button>
+                                    <button>BUY IT NOW</button>
+                                </div>
+                            </div>
+                            <div class="share_link">
+                                <b>SHARE WITH:</b>
+                                <div class="share_wrapper  d-flex align-items-center">
+                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <footer>
         <div class="container-fluid container-xl">
             <div class="footer_wrapper">
@@ -865,6 +1246,7 @@
     <script src="js/jquery-backToTop.min.js"></script>
     <script src="js/jquery.pajinatify.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/cwa_lightbox_v1.js"></script>
     <script src="js/product.js"></script>
 </body>
 
