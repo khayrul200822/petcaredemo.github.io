@@ -67,7 +67,7 @@ $(document).ready(() => {
   $(window).on("scroll", () => {
     const scrollPosition = $(window).scrollTop();
 
-    if (scrollPosition >= (heroSectionBottom -1200)) {
+    if (scrollPosition >= (heroSectionBottom -1000)) {
       $("header").addClass("sticky_animation");
       $(".top-haeder").addClass("hide_top_header")
     } else {
