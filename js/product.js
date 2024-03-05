@@ -63,7 +63,7 @@ decrease_button.forEach((btn, index) => {
 
 //sticky header script
 $(document).ready(() => {
-  const heroSectionBottom = $(".product_page_wrapper ").offset().top + $(".product_page_wrapper ").outerHeight();
+  const heroSectionBottom = $(".product_page").offset().top + $(".product_page").outerHeight();
   $(window).on("scroll", () => {
     const scrollPosition = $(window).scrollTop();
 
