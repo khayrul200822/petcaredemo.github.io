@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/jquery.pajinatify.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/star-rating-svg.css">
     <link rel="stylesheet" href="css/cwa_lightbox_css.css">
 </head>
 
@@ -933,9 +934,8 @@
                                         </a>
                                     </div>
                                     <div class="swiper-slide ">
-                                        <a class="img_area cwa-lightbox-image" href="img/product-2.png">
-                                            <img class="img-fluid " src="img/product-2.png"
-                                                alt="slider product image" />
+                                        <a class="img_area">
+                                            <video src="img/product.mp4" controls autoplay></video>
                                         </a>
                                     </div>
                                     <div class="swiper-slide ">
@@ -982,8 +982,7 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="thub_img">
-                                            <img class="img-fluid " src="img/product-2.png"
-                                                alt="slider product image" />
+                                            <video src="img/product.mp4"></video>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
@@ -1051,7 +1050,7 @@
                                     <i class="fa-regular fa-star"></i>
                                     <i class="fa-regular fa-star"></i>
                                 </div>
-                                <a href="#">VIEW ALL REVIEW</a>
+                                <a href="#Review" class="user_review">VIEW ALL REVIEW</a>
                             </div>
                             <div class="price_div d-flex align-items-center">
                                 <del>$120</del>
@@ -1151,8 +1150,663 @@
             </div>
         </div>
     </section>
-
-
+    <section class="product_tab_section">
+        <div class="container-fluid container-xl">
+            <div class="tab_section_wrapper">
+                <div class="product_details_tabs">
+                    <div class="tab_container d-flex justify-content-center ">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="Description-tab" data-bs-toggle="tab"
+                                    data-bs-target="#Description" type="button" role="tab" aria-controls="Description"
+                                    aria-selected="true">Description</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="brand-tab" data-bs-toggle="tab" data-bs-target="#brand"
+                                    type="button" role="tab" aria-controls="brand" aria-selected="false">About
+                                    Brand</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="Review-tab" data-bs-toggle="tab" data-bs-target="#Review"
+                                    type="button" role="tab" aria-controls="Review"
+                                    aria-selected="false">Review</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="Questions-tab" data-bs-toggle="tab"
+                                    data-bs-target="#Questions" type="button" role="tab" aria-controls="Questions"
+                                    aria-selected="false">Questions</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="Description" role="tabpanel"
+                            aria-labelledby="Description-tab" tabindex="0">
+                            <div class="description_tab">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut deleniti dolorum
+                                    similique facilis molestiae quidem, id aspernatur perspiciatis placeat, modi
+                                    aliquid, reprehenderit porro esse nesciunt odio natus corporis? Reiciendis, facere.
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, omnis cupiditate
+                                    veniam officiis consequuntur totam. Architecto harum provident odit illo magnam quas
+                                    eum amet voluptatum. Hic dolores labore veritatis praesentium. <br> cupiditate
+                                    veniam officiis consequuntur totam. Architecto harum provident odit illo magnam quas
+                                    eum amet voluptatum. Hic dolores labore veritatis praesentium.</p>
+                                <div class="product_des_imgs">
+                                    <div class="img_container">
+                                        <img class="img-fluid" src="img/product-11.png" alt="img/product-11.png">
+                                    </div>
+                                    <div class="img_container">
+                                        <img class="img-fluid" src="img/product-12.png" alt="img/product-11.png">
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, omnis cupiditate
+                                    veniam officiis consequuntur totam. Architecto harum provident odit illo magnam quas
+                                    eum amet voluptatum. Hic dolores labore veritatis praesentium. <br> cupiditate
+                                    veniam officiis consequuntur totam. Architecto harum provident odit illo magnam quas
+                                    eum amet voluptatum. Hic dolores labore veritatis praesentium.</p>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="brand" role="tabpanel" aria-labelledby="brand-tab" tabindex="0">
+                            <h3>El<span>mart</span></h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                        <div class="tab-pane fade" id="Review" role="tabpanel" aria-labelledby="Review-tab"
+                            tabindex="0">
+                            <h3>Customer Review</h3>
+                            <div class="review_rating">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="review_div">
+                                <p>Be the first to write a review</p>
+                                <button class="review_toggle">Write a Review</button>
+                                <form class="review_form ">
+                                    <div class="my-rating"></div>
+                                    <div class="rating_input">
+                                        <label for="review_title">Review Title</label>
+                                        <input type="text" id="review_title" placeholder="Give a Review title" required>
+                                    </div>
+                                    <div class="rating_input">
+                                        <label for="review_msg">Review</label>
+                                        <textarea type="text" id="review_msg" placeholder="Write Your Comment Here"
+                                            required></textarea>
+                                    </div>
+                                    <div class="rating_file_input">
+                                        <span>Upload Photo Or Video</span>
+                                        <div class="wrap-custom-file">
+                                            <input type="file" name="image1" id="image_upload"
+                                                accept=".gif, .jpg, .png" />
+                                            <label for="image_upload">
+                                                <span><i class="fa-solid fa-cloud-arrow-up"></i></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="rating_input">
+                                        <label for="r_name">Name</label>
+                                        <input type="text" id="r_name" placeholder="Enter Your Name">
+                                    </div>
+                                    <div class="rating_input">
+                                        <label for="r_email">Email</label>
+                                        <input type="email" id="r_email" placeholder="Enter Your Email">
+                                    </div>
+                                    <div class="rating_input">
+                                        <button type="submit">Submit Review</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="Questions" role="tabpanel" aria-labelledby="Questions-tab"
+                            tabindex="0">
+                            <ul class="accordion-list">
+                                <li>
+                                    <h3>I want to return my purchase! What do I do?</h3>
+                                    <div class="answer">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo cum alias,
+                                            error obcaecati quis maiores inventore, architecto fugit consequuntur veniam
+                                            tempore minus vitae sed rem optio eveniet dolores quibusdam suscipit. Lorem,
+                                            ipsum dolor sit amet consectetur adipisicing elit. Illo cum alias, error
+                                            obcaecati quis maiores inventore, architecto fugit consequuntur veniam
+                                            tempore minus vitae sed rem optio eveniet dolores quibusdam suscipit.Lorem,
+                                            ipsum dolor sit amet consectetur adipisicing elit. Illo cum alias, error
+                                            obcaecati quis maiores inventore, architecto fugit consequuntur veniam
+                                            tempore minus vitae sed rem optio eveniet dolores quibusdam suscipit.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3>How long does it take for me to get a refund?</h3>
+                                    <div class="answer">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo cum alias,
+                                            error obcaecati quis maiores inventore, architecto fugit consequuntur veniam
+                                            tempore minus vitae sed rem optio eveniet dolores quibusdam suscipit. Lorem,
+                                            ipsum dolor sit amet consectetur adipisicing elit. Illo cum alias, error
+                                            obcaecati quis maiores inventore, architecto fugit consequuntur veniam
+                                            tempore minus vitae sed rem optio eveniet dolores quibusdam suscipit.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3>How can I get assistance if I need it?</h3>
+                                    <div class="answer">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo cum alias,
+                                            error obcaecati quis maiores inventore, architecto fugit consequuntur veniam
+                                            tempore minus vitae sed rem optio eveniet dolores quibusdam suscipit. Lorem,
+                                            ipsum dolor sit amet consectetur adipisicing elit. Illo cum alias, error
+                                            obcaecati quis maiores inventore, architecto fugit consequuntur veniam
+                                            tempore minus vitae sed rem optio eveniet dolores quibusdam suscipit.<br>
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo cum alias,
+                                            error obcaecati quis maiores inventore, architecto fugit consequuntur veniam
+                                            tempore minus vitae sed rem optio eveniet dolores quibusdam suscipit.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3>How do I return orders shipped in multiple boxes?</h3>
+                                    <div class="answer">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo cum alias,
+                                            error obcaecati quis maiores inventore, architecto fugit consequuntur veniam
+                                            tempore minus vitae sed rem optio eveniet dolores quibusdam suscipit.Lorem,
+                                            ipsum dolor sit amet consectetur adipisicing elit. Illo cum alias, error
+                                            obcaecati quis maiores inventore, architecto fugit consequuntur veniam
+                                            tempore minus vitae sed rem optio eveniet dolores quibusdam suscipit.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="related_product_section">
+        <div class="container-fluid container-xl">
+            <div class="related_product_wrapper">
+                <div class="section_title">
+                    <h2>Related Product</h2>
+                </div>
+                <div class="related_product_slider">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="r_product_img">
+                                        <img class="img-fluid" src="img/product-13.png" alt="img/product-12.png">
+                                        <div class="woo_option d-flex align-items-center">
+                                            <button class="wishlist_btn">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="r_product_info">
+                                        <h3 class="mb-0"><a href="#">Pet Nail Trimmer</a></h3>
+                                        <span>$80</span>
+                                        <div class="r_product_btns d-flex ">
+                                            <button class="cart_btn">Add To Cart</button>
+                                            <button class="wishlist_btn">
+                                                <i class="fa-solid fa-basket-shopping"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="r_product_img">
+                                        <img class="img-fluid" src="img/product-14.png" alt="img/product-12.png">
+                                        <div class="woo_option d-flex align-items-center">
+                                            <button class="wishlist_btn">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="r_product_info">
+                                        <h3 class="mb-0"><a href="#">Pet Nail Trimmer</a></h3>
+                                        <span>$80</span>
+                                        <div class="r_product_btns d-flex ">
+                                            <button class="cart_btn">Add To Cart</button>
+                                            <button class="wishlist_btn">
+                                                <i class="fa-solid fa-basket-shopping"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="r_product_img">
+                                        <img class="img-fluid" src="img/product-15.png" alt="img/product-12.png">
+                                        <div class="woo_option d-flex align-items-center">
+                                            <button class="wishlist_btn">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="r_product_info">
+                                        <h3 class="mb-0"><a href="#">Pet Nail Trimmer</a></h3>
+                                        <span>$80</span>
+                                        <div class="r_product_btns d-flex ">
+                                            <button class="cart_btn">Add To Cart</button>
+                                            <button class="wishlist_btn">
+                                                <i class="fa-solid fa-basket-shopping"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="r_product_img">
+                                        <img class="img-fluid" src="img/product-12.png" alt="img/product-12.png">
+                                        <div class="woo_option d-flex align-items-center">
+                                            <button class="wishlist_btn">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="r_product_info">
+                                        <h3 class="mb-0"><a href="#">Pet Nail Trimmer</a></h3>
+                                        <span>$80</span>
+                                        <div class="r_product_btns d-flex ">
+                                            <button class="cart_btn">Add To Cart</button>
+                                            <button class="wishlist_btn">
+                                                <i class="fa-solid fa-basket-shopping"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="r_product_img">
+                                        <img class="img-fluid" src="img/product-1b.png" alt="img/product-12.png">
+                                        <div class="woo_option d-flex align-items-center">
+                                            <button class="wishlist_btn">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="r_product_info">
+                                        <h3 class="mb-0"><a href="#">Pet Nail Trimmer</a></h3>
+                                        <span>$80</span>
+                                        <div class="r_product_btns d-flex ">
+                                            <button class="cart_btn">Add To Cart</button>
+                                            <button class="wishlist_btn">
+                                                <i class="fa-solid fa-basket-shopping"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="r_product_img">
+                                        <img class="img-fluid" src="img/product-06.png" alt="img/product-12.png">
+                                        <div class="woo_option d-flex align-items-center">
+                                            <button class="wishlist_btn">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="r_product_info">
+                                        <h3 class="mb-0"><a href="#">Pet Nail Trimmer</a></h3>
+                                        <span>$80</span>
+                                        <div class="r_product_btns d-flex ">
+                                            <button class="cart_btn">Add To Cart</button>
+                                            <button class="wishlist_btn">
+                                                <i class="fa-solid fa-basket-shopping"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="r_product_img">
+                                        <img class="img-fluid" src="img/product-1b.png" alt="img/product-12.png">
+                                        <div class="woo_option d-flex align-items-center">
+                                            <button class="wishlist_btn">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="r_product_info">
+                                        <h3 class="mb-0"><a href="#">Pet Nail Trimmer</a></h3>
+                                        <span>$80</span>
+                                        <div class="r_product_btns d-flex ">
+                                            <button class="cart_btn">Add To Cart</button>
+                                            <button class="wishlist_btn">
+                                                <i class="fa-solid fa-basket-shopping"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="r_product_img">
+                                        <img class="img-fluid" src="img/product-11.png" alt="img/product-12.png">
+                                        <div class="woo_option d-flex align-items-center">
+                                            <button class="wishlist_btn">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="r_product_info">
+                                        <h3 class="mb-0"><a href="#">Pet Nail Trimmer</a></h3>
+                                        <span>$80</span>
+                                        <div class="r_product_btns d-flex ">
+                                            <button class="cart_btn">Add To Cart</button>
+                                            <button class="wishlist_btn">
+                                                <i class="fa-solid fa-basket-shopping"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="top_product_section">
+        <div class="container-fluid container-xl">
+            <div class="related_product_wrapper">
+                <div class="section_title">
+                    <h2>Top Rated Product</h2>
+                </div>
+                <div class="related_product_slider">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="r_product_img">
+                                        <img class="img-fluid" src="img/product-2.png" alt="img/product-12.png">
+                                        <div class="woo_option d-flex align-items-center">
+                                            <button class="wishlist_btn">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="r_product_info">
+                                        <h3 class="mb-0"><a href="#">Pet Nail Trimmer</a></h3>
+                                        <span>$80</span>
+                                        <div class="r_product_btns d-flex ">
+                                            <button class="cart_btn">Add To Cart</button>
+                                            <button class="wishlist_btn">
+                                                <i class="fa-solid fa-basket-shopping"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="r_product_img">
+                                        <img class="img-fluid" src="img/product-3.png" alt="img/product-12.png">
+                                        <div class="woo_option d-flex align-items-center">
+                                            <button class="wishlist_btn">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="r_product_info">
+                                        <h3 class="mb-0"><a href="#">Pet Nail Trimmer</a></h3>
+                                        <span>$80</span>
+                                        <div class="r_product_btns d-flex ">
+                                            <button class="cart_btn">Add To Cart</button>
+                                            <button class="wishlist_btn">
+                                                <i class="fa-solid fa-basket-shopping"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="r_product_img">
+                                        <img class="img-fluid" src="img/product-07.png" alt="img/product-12.png">
+                                        <div class="woo_option d-flex align-items-center">
+                                            <button class="wishlist_btn">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="r_product_info">
+                                        <h3 class="mb-0"><a href="#">Pet Nail Trimmer</a></h3>
+                                        <span>$80</span>
+                                        <div class="r_product_btns d-flex ">
+                                            <button class="cart_btn">Add To Cart</button>
+                                            <button class="wishlist_btn">
+                                                <i class="fa-solid fa-basket-shopping"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="r_product_img">
+                                        <img class="img-fluid" src="img/product-14.png" alt="img/product-12.png">
+                                        <div class="woo_option d-flex align-items-center">
+                                            <button class="wishlist_btn">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="r_product_info">
+                                        <h3 class="mb-0"><a href="#">Pet Nail Trimmer</a></h3>
+                                        <span>$80</span>
+                                        <div class="r_product_btns d-flex ">
+                                            <button class="cart_btn">Add To Cart</button>
+                                            <button class="wishlist_btn">
+                                                <i class="fa-solid fa-basket-shopping"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="r_product_img">
+                                        <img class="img-fluid" src="img/product-1b.png" alt="img/product-12.png">
+                                        <div class="woo_option d-flex align-items-center">
+                                            <button class="wishlist_btn">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="r_product_info">
+                                        <h3 class="mb-0"><a href="#">Pet Nail Trimmer</a></h3>
+                                        <span>$80</span>
+                                        <div class="r_product_btns d-flex ">
+                                            <button class="cart_btn">Add To Cart</button>
+                                            <button class="wishlist_btn">
+                                                <i class="fa-solid fa-basket-shopping"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="r_product_img">
+                                        <img class="img-fluid" src="img/product-06.png" alt="img/product-12.png">
+                                        <div class="woo_option d-flex align-items-center">
+                                            <button class="wishlist_btn">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="r_product_info">
+                                        <h3 class="mb-0"><a href="#">Pet Nail Trimmer</a></h3>
+                                        <span>$80</span>
+                                        <div class="r_product_btns d-flex ">
+                                            <button class="cart_btn">Add To Cart</button>
+                                            <button class="wishlist_btn">
+                                                <i class="fa-solid fa-basket-shopping"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="r_product_img">
+                                        <img class="img-fluid" src="img/product-1b.png" alt="img/product-12.png">
+                                        <div class="woo_option d-flex align-items-center">
+                                            <button class="wishlist_btn">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="r_product_info">
+                                        <h3 class="mb-0"><a href="#">Pet Nail Trimmer</a></h3>
+                                        <span>$80</span>
+                                        <div class="r_product_btns d-flex ">
+                                            <button class="cart_btn">Add To Cart</button>
+                                            <button class="wishlist_btn">
+                                                <i class="fa-solid fa-basket-shopping"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="single_r_product">
+                                    <div class="r_product_img">
+                                        <img class="img-fluid" src="img/product-11.png" alt="img/product-12.png">
+                                        <div class="woo_option d-flex align-items-center">
+                                            <button class="wishlist_btn">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                            <button class="compare_btn">
+                                                <i class="fa-solid fa-shuffle"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="r_product_info">
+                                        <h3 class="mb-0"><a href="#">Pet Nail Trimmer</a></h3>
+                                        <span>$80</span>
+                                        <div class="r_product_btns d-flex ">
+                                            <button class="cart_btn">Add To Cart</button>
+                                            <button class="wishlist_btn">
+                                                <i class="fa-solid fa-basket-shopping"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
         <div class="container-fluid container-xl">
             <div class="footer_wrapper">
@@ -1247,6 +1901,7 @@
     <script src="js/jquery.pajinatify.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/cwa_lightbox_v1.js"></script>
+    <script src="js/jquery.star-rating-svg.js"></script>
     <script src="js/product.js"></script>
 </body>
 

@@ -78,7 +78,69 @@ $(document).ready(() => {
 });
 
 
+$(document).ready(function(){
+  $('.accordion-list > li > .answer').hide();
+    
+  $('.accordion-list > li').click(function() {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active").find(".answer").slideUp();
+    } else {
+      $(".accordion-list > li.active .answer").slideUp();
+      $(".accordion-list > li.active").removeClass("active");
+      $(this).addClass("active").find(".answer").slideDown();
+    }
+    return false;
+  });
+  
+});
 
+//review toggle button handling
+const review_button = document.querySelector(".review_toggle");
+const review_form_area = document.querySelector(".review_form");
+
+review_button.addEventListener("click", () => {
+  review_form_area.classList.toggle("form_area_show")
+  if(review_form_area.className.includes("form_area_show")){
+    review_button.textContent = "Cancle Review"
+  }else{
+    review_button.textContent = "Write a Review"
+  }
+
+})
+
+
+// rating fillup 
+$(".my-rating").starRating({
+  starSize: 25,
+  minRating: 0,
+  activeColor:'#EEBE13',
+  ratedColor:'crimso',
+  disableAfterRate:false,
+});
+
+// fill uploader
+$('input[type="file"]').each(function(){
+
+  var $file = $(this),
+      $label = $file.next('label'),
+      $labelText = $label.find('span'),
+      labelDefault = $labelText.text();
+
+  $file.on('change', function(event){
+    var fileName = $file.val().split( '\\' ).pop(),
+        tmppath = URL.createObjectURL(event.target.files[0]);
+    if( fileName ){
+      $label
+        .addClass('file-ok')
+        .css('background-image', 'url(' + tmppath + ')');
+      $labelText.text(fileName);
+    }else{
+      $label.removeClass('file-ok');
+      $labelText.text(labelDefault);
+    }
+  });
+
+});
 
 
 //cout down for offer
@@ -122,7 +184,28 @@ const countdownInterval = setInterval(function () {
 function formatTime(value) {
   return value < 10 ? "0" + value : value;
 }
+// for review section 
+const review_area = document.querySelector("#Review-tab");
+const review_container = document.querySelectorAll("#myTab li button");
+const write_review = document.querySelector(".user_review")
+const review_area_select = document.querySelectorAll(".tab-pane");
+const review_section = document.querySelector("#Review");
 
+write_review.addEventListener("click", () => {
+
+  review_container.forEach(container => {
+    container.classList.remove("active")
+  })
+  review_area.classList.add("active")
+  review_area_select.forEach(select_area => {
+    select_area.classList.remove("active")
+    select_area.classList.remove("show")
+  })
+  review_section.classList.add("show")
+  review_section.classList.add("active")
+
+
+})
 
 
 
@@ -277,3 +360,30 @@ var swiper2 = new Swiper(".mySwiper5", {
 }
 );
 
+var swiper = new Swiper(".mySwiper", {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    500: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1035: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+  },
+});
