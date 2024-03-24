@@ -364,21 +364,22 @@ $(".accordion-title").click(function () {
 });
 
 
-//sticky header script
-$(document).ready(() => {
-  const heroSectionBottom = $(".product_area").offset().top + $(".product_area").outerHeight();
-  $(window).on("scroll", () => {
-    const scrollPosition = $(window).scrollTop();
+//sticky header handler
+const header = document.querySelector("header");
+const toggleClass = "sticky_animation";
 
-    if (scrollPosition >= (heroSectionBottom - 1700)) {
-      $("header").addClass("sticky_animation");
-      $(".top-haeder").addClass("hide_top_header")
-    } else {
-      $("header").removeClass("sticky_animation");
-      $(".top-haeder").removeClass("hide_top_header");
-    }
-  });
-});
+$(document).ready(() => {
+    $(window).on("scroll", () => {
+        if ($(window).scrollTop()) {
+            header.classList.add(toggleClass);
+            $(".top-haeder").addClass("hide_top_header")
+            
+        } else {
+            header.classList.remove(toggleClass);
+            $(".top-haeder").removeClass("hide_top_header");
+        }
+    })
+})
 
 
 

@@ -54,22 +54,22 @@ select_option.forEach(option => {
   });
 });
  
+//sticky header handler
+const header = document.querySelector("header");
+const toggleClass = "sticky_animation";
 
-//sticky header script
 $(document).ready(() => {
-  const heroSectionBottom = $(".hero_section").offset().top + $(".hero_section").outerHeight();
-  $(window).on("scroll", () => {
-    const scrollPosition = $(window).scrollTop();
-
-    if (scrollPosition >= (heroSectionBottom-300)) {
-      $("header").addClass("sticky_animation");
-      $(".top-haeder").addClass("hide_top_header")
-    } else {
-      $("header").removeClass("sticky_animation");
-      $(".top-haeder").removeClass("hide_top_header");
-    }
-  });
-});
+    $(window).on("scroll", () => {
+        if ($(window).scrollTop()) {
+            header.classList.add(toggleClass);
+            $(".top-haeder").addClass("hide_top_header")
+            
+        } else {
+            header.classList.remove(toggleClass);
+            $(".top-haeder").removeClass("hide_top_header");
+        }
+    })
+})
 //aos on scroll animation intialize
 AOS.init();
 

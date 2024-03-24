@@ -61,21 +61,25 @@ decrease_button.forEach((btn, index) => {
 })
 
 
-//sticky header script
-$(document).ready(() => {
-  const heroSectionBottom = $(".product_page").offset().top + $(".product_page").outerHeight();
-  $(window).on("scroll", () => {
-    const scrollPosition = $(window).scrollTop();
 
-    if (scrollPosition >= (heroSectionBottom -1000)) {
-      $("header").addClass("sticky_animation");
-      $(".top-haeder").addClass("hide_top_header")
-    } else {
-      $("header").removeClass("sticky_animation");
-      $(".top-haeder").removeClass("hide_top_header");
-    }
-  });
-});
+//sticky header handler
+const header = document.querySelector("header");
+const toggleClass = "sticky_animation";
+
+$(document).ready(() => {
+    $(window).on("scroll", () => {
+        if ($(window).scrollTop()) {
+            header.classList.add(toggleClass);
+            $(".top-haeder").addClass("hide_top_header")
+            
+        } else {
+            header.classList.remove(toggleClass);
+            $(".top-haeder").removeClass("hide_top_header");
+        }
+    })
+})
+
+
 
 
 $(document).ready(function(){
